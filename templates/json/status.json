@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "type": "status",
+  "title": "任务状态与恢复检查",
+  "subtitle": "用持久记录恢复工作，不靠模糊的聊天印象；已完成事项不重做，未批准关口不跳过。",
+  "meta": {
+    "run_id": "TEMPLATE",
+    "gate": "",
+    "step": "",
+    "revision": 1,
+    "date": "按任务填写",
+    "status": "DRAFT",
+    "source_type": "TEMPLATE",
+    "is_template": true
+  },
+  "sections": [
+    {
+      "title": "当前状态",
+      "blocks": [
+        {
+          "type": "kv",
+          "items": [
+            {
+              "label": "任务ID",
+              "value": "待读 run/state.json 与最新journal。"
+            },
+            {
+              "label": "当前阶段/步骤",
+              "value": "待填写真实状态。"
+            },
+            {
+              "label": "最后一次批准",
+              "value": "待填写关口、版本、内容哈希与用户原文引用。"
+            },
+            {
+              "label": "待确认事项",
+              "value": "待填写唯一待批准关口或明确阻塞。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "步骤与工作包",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "步骤/工作包",
+            "状态",
+            "结果位置",
+            "还需要什么"
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "title": "资源与进程核对",
+      "blocks": [
+        {
+          "type": "metrics",
+          "items": [
+            {
+              "label": "Sol",
+              "value": "0 / 3"
+            },
+            {
+              "label": "Luna",
+              "value": "0 / 6"
+            },
+            {
+              "label": "浏览器",
+              "value": "0 / 2"
+            },
+            {
+              "label": "高内存",
+              "value": "0 / 1"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "text": "以上数字在正式报告须取自真实登记。恢复时核对残留进程再释放资源，不因时间过去或会话重开而自动判定任务已停止。",
+          "title": "",
+          "level": "warning"
+        }
+      ]
+    },
+    {
+      "title": "恢复检查",
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "status": "NOT_RUN",
+              "text": "最新journal完整，快照与其一致",
+              "detail": "待实际执行后填入证据"
+            },
+            {
+              "status": "NOT_RUN",
+              "text": "实际项目文件与上次报告无未解释变化",
+              "detail": "待实际执行后填入证据"
+            },
+            {
+              "status": "NOT_RUN",
+              "text": "已批准报告内容哈希未改变",
+              "detail": "待实际执行后填入证据"
+            },
+            {
+              "status": "NOT_RUN",
+              "text": "未完成工作和残留进程已核对",
+              "detail": "待实际执行后填入证据"
+            },
+            {
+              "status": "NOT_RUN",
+              "text": "下一行动仍处在原批准范围内",
+              "detail": "待实际执行后填入证据"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "下一项允许的动作",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "待写明恢复后的准确动作；若当前状态是等待用户确认，继续等待，不启动实现。"
+        }
+      ]
+    }
+  ],
+  "blocking_questions": []
+}

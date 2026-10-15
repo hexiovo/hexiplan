@@ -1,0 +1,15 @@
+请仅部署 HexiPlan 5.1，不开始业务任务，也不安装任何 MCP。
+
+压缩包路径：<替换为 HexiPlan_Standalone_v5_1.zip 的完整路径>
+目标文件夹：<替换为我指定的新空目录>
+
+1. 目标不存在可创建，非空立即停止；不覆盖、合并、迁移旧版本或旧任务，不擅自改位置。安全检查ZIP，拒绝路径穿越、绝对/特殊设备/ADS路径、符号链接和目录联接、重复目标或逃逸。去掉包内 HexiPlan/ 顶层后应为“目标/hexiplan.md”，保留其他子目录。
+2. 不改全局或项目AGENTS.md、.codex、.agents、Skills、默认模型、PATH、注册表、执行策略或已有业务内容。仅在新目标中部署，临时文件也限在目标内。不联网、不自动下载运行时、浏览器或MCP，不安装上游整套Skills，不关闭安全审批。
+3. 阅读 README.md、docs/5.1更新说明.md、docs/针对性反馈.md、extensions/TOOL_POLICY.md。用已有 Python 3.10+ 执行 python -B tools/verify_package.py；替换为实际可用的解释器。缺环境或自检失败如实报告并停止，不自行安装、修包或更新校验和。
+4. 反馈表单已经接入，无需重新设计：可以选择章节/截图/验证项/表格行并填写、导出JSON/文字/Word。表单在 tools/review_assets；新报告复用 render_layout.py 或 render_report.py，不改HTML/CSS/JS。REVIEW_DEMO.html 可直接试用，UI_OPTIONS.html 可比较四种淡绿色结构；报告布局选择不等于业务UI或业务步骤批准。
+5. 后续用户交回意见时，由记录Sol使用 tools/review_feedback.py 核对当前报告版本，再根据真实用户消息登记。导入只记意见，不推进任务，不重置修复次数，不把意见JSON当成批准凭证。未经我确认不得进入下一关；不得把旧版报告或旧意见悄悄覆盖。
+6. 继续遵守MCP工具策略：现成脚本/CLI优先，具体工具清单的来源/固定版本/准确命令/权限/联网/数据/费用/缓存预算在正式方案中单独批准后使用。本部署指令不批准任何具体MCP或外部写入。
+7. 不在Codex工具调用里嵌套启动交互式Codex。部署后我会亲自双击start-hexiplan.cmd，仅为该专用会话加载配置。
+8. 完成后报告：实际部署目录、自检真实结果、START_HERE.html、REVIEW_DEMO.html、UI_OPTIONS.html 和 start-hexiplan.cmd 的完整路径；告诉我以后如何打开任务及把意见交回。不要声称离线自检已验证我的Windows、模型账户、MCP或Microsoft Word。
+
+这只授权离线部署与自检，业务需求、正式方案、整体步骤、当前步骤计划和验收仍逐关等待我确认。

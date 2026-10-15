@@ -1,0 +1,317 @@
+{
+  "type": "guide",
+  "kicker": "HEXIPLAN 4.0 / 本地规则库",
+  "title": "按需读取，分工不变",
+  "subtitle": "中文与英文润色、科学写作、文献方法、UI设计和故障定位，已纳入独立目录。只在明确启动 HexiPlan 后，由负责该任务的代理读取。",
+  "meta": {
+    "run_id": "工具包说明",
+    "gate": "",
+    "step": "",
+    "revision": 4,
+    "date": "2026-09-27",
+    "status": "使用说明",
+    "source_type": "TOOLKIT_DOCUMENT",
+    "is_template": false
+  },
+  "sections": [
+    {
+      "title": "从哪里开始",
+      "blocks": [
+        {
+          "type": "callout",
+          "title": "使用方法没有改变",
+          "text": "双击 start-hexiplan.cmd，选择新建或继续，再输入任务。无需每次把规则复制进聊天，也不必记住各个模块名称。部署只使用新的空目录；旧版本与旧任务保留不动。"
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "title": "工作流与12套HTML框架",
+              "href": "START_HERE.html",
+              "description": "查看原有确认流程、模板入口和截图总览"
+            },
+            {
+              "title": "交给Codex的部署提示词",
+              "href": "prompts/INSTALL_CODEX.txt",
+              "description": "替换压缩包路径与目标目录即可；不开始业务开发"
+            },
+            {
+              "title": "详细模块指南",
+              "href": "docs/模块与省上下文.md",
+              "description": "适配原则、只读索引、报告编辑与恢复记录"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "谁在什么时候读取",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "当前任务",
+            "读取者",
+            "本地规则"
+          ],
+          "rows": [
+            [
+              "中文方案／验收正文",
+              "报告 Sol",
+              "REPORT_STYLE + HUMANIZER_ZH"
+            ],
+            [
+              "英文报告正文",
+              "报告 Sol",
+              "REPORT_STYLE + HUMANIZER_EN"
+            ],
+            [
+              "学术结果报告",
+              "报告 Sol",
+              "科学含义保护 + scientific-writing + 报告风格 + 对应语言润色"
+            ],
+            [
+              "文献与方法调研",
+              "研究 Sol",
+              "科学含义保护 + literature-review + citation-management"
+            ],
+            [
+              "方法风险与证据评价",
+              "研究／独立校验 Sol",
+              "科学含义保护 + scientific-critical-thinking"
+            ],
+            [
+              "科学结果绘图",
+              "执行代理",
+              "scientific-visualization"
+            ],
+            [
+              "新业务UI的方案和实现",
+              "UI执行代理",
+              "frontend-design；必须有用户确认的方向"
+            ],
+            [
+              "阻塞与报错",
+              "负责修复的执行代理",
+              "systematic-debugging；最多两轮修复边界不变"
+            ],
+            [
+              "普通实现或Astra总体规划",
+              "对应角色",
+              "不读取无关全文；Astra只需简短路由索引"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "text": "这不是自动安装的 Skill。MODULE_ROUTER.md 是短索引，catalog.json 是机器可读清单。规则已经本地化，不会因为目录里有文件，就在普通 Codex 任务中启用。"
+        }
+      ]
+    },
+    {
+      "title": "模块文件与来源",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "title": "中文 Humanizer-zh 适配版",
+              "href": "modules/writing/HUMANIZER_ZH.md",
+              "description": "去套话但保留事实、条件、作者文体和完成状态"
+            },
+            {
+              "title": "英文 Humanizer 备用",
+              "href": "modules/writing/HUMANIZER_EN.md",
+              "description": "只在英文叙述需要编辑时使用，不与中文版反复叠加"
+            },
+            {
+              "title": "科学写作",
+              "href": "modules/science/SCIENTIFIC_WRITING.md",
+              "description": "方法、结果与证据对应；不补造数据、结论或引用"
+            },
+            {
+              "title": "文献综述",
+              "href": "modules/science/LITERATURE_REVIEW.md",
+              "description": "真实检索、筛选、证据提取与多方案比较"
+            },
+            {
+              "title": "引用管理",
+              "href": "modules/science/CITATION_MANAGEMENT.md",
+              "description": "核实书目信息，区分来源发现与主张核验"
+            },
+            {
+              "title": "科学批判性思维",
+              "href": "modules/science/SCIENTIFIC_CRITICAL_THINKING.md",
+              "description": "按风险检查设计、假设、混杂与推断边界"
+            },
+            {
+              "title": "科学可视化",
+              "href": "modules/science/SCIENTIFIC_VISUALIZATION.md",
+              "description": "诚实表达数据、误差和缺失；保留来源与导出条件"
+            },
+            {
+              "title": "UI设计",
+              "href": "modules/ui/FRONTEND_DESIGN.md",
+              "description": "先向用户确认风格，再实现；不改现有报告模板"
+            },
+            {
+              "title": "系统化调试",
+              "href": "modules/engineering/SYSTEMATIC_DEBUGGING.md",
+              "description": "先定位证据与最小复现，再针对性修复"
+            },
+            {
+              "title": "科学含义保护",
+              "href": "modules/guards/ACADEMIC_FIDELITY.md",
+              "description": "保护数值、限定、分析属性与数据身份"
+            },
+            {
+              "title": "报告语言与结构保护",
+              "href": "modules/guards/REPORT_STYLE.md",
+              "description": "只编辑允许的正文，保留表格、结构和确认版本"
+            },
+            {
+              "title": "stop-slop 参考说明",
+              "href": "modules/reference/STOP_SLOP_NOTE.md",
+              "description": "只记录参考与限制，不启用强制词语／句式禁令"
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "title": "来源与许可证",
+              "href": "third_party/THIRD_PARTY_NOTICES.md",
+              "description": "上游出处与许可证文件"
+            },
+            {
+              "title": "具体适配说明",
+              "href": "third_party/ADAPTATION_NOTES.md",
+              "description": "保留什么、删改什么，以及未包含的上游工具"
+            },
+            {
+              "title": "来源清单",
+              "href": "third_party/SOURCES.json",
+              "description": "查询到的来源路径与观察记录；不是完整上游快照"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "报告编辑只做一次",
+      "blocks": [
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "结果与证据已经准备好",
+              "description": "报告 Sol 使用真实验证结果、截图、日志和结构化数据。",
+              "status": "WORKFLOW"
+            },
+            {
+              "title": "填充JSON并做一轮正文编辑",
+              "description": "读取所需模块，不添加额外润色代理；不得改变科学含义。",
+              "status": "WORKFLOW"
+            },
+            {
+              "title": "本地机械检查与语义对照",
+              "description": "guard_report.py 比较结构、数字、状态与其他保护字段。报告 Sol 对照主张和限定。",
+              "status": "WORKFLOW"
+            },
+            {
+              "title": "复用模板，生成新版本",
+              "description": "调用既有 render_report.py；生成报告与内容哈希后，不再悄悄改写。",
+              "status": "WORKFLOW"
+            },
+            {
+              "title": "用户审核",
+              "description": "只有用户明确批准对应版本，流程才能进入下一关。",
+              "status": "WORKFLOW"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "level": "warning",
+          "title": "检查通过不代表全部正确",
+          "text": "机械检查不能理解所有语义，也不是AI检测器、统计验证器或权限控制器。合成验证数据必须标注为合成；不能改写成真实研究结果。"
+        }
+      ]
+    },
+    {
+      "title": "为Codex准备的现成命令",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "以下命令由被分配的执行／报告代理在已启用的任务中使用。日常使用者无需手工运行。Astra 仍只负责规划与分发。"
+        },
+        {
+          "type": "code",
+          "text": "python -B tools/route_modules.py --role sol-reporter --kind report --language zh\npython -B tools/route_modules.py --role sol-reporter --kind academic-report --language zh\npython -B tools/route_modules.py --role sol-researcher --kind literature\npython -B tools/guard_report.py --before BEFORE.json --after AFTER.json"
+        },
+        {
+          "type": "text",
+          "text": "路由工具只输出需要读取的文件，不自动调用模型或安装环境。只有显式指定 --record-selection，并提供本包内已初始化任务及所有者时，才写入模块选择和恢复快照；不改变确认关口。"
+        }
+      ]
+    },
+    {
+      "title": "保留与边界",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "保持不变",
+            "本版说明"
+          ],
+          "rows": [
+            [
+              "模型角色与资源",
+              "Astra-high；Sol共3个、Luna共6个、浏览器2个、高内存1个；最多两轮修复"
+            ],
+            [
+              "确认与恢复",
+              "原有需求／正式方案／总步骤／本步计划／验收关口继续生效"
+            ],
+            [
+              "12套模板与页面功能",
+              "HTML框架、CSS、JS及Word导出代码与3.0版逐文件哈希一致"
+            ],
+            [
+              "离线使用",
+              "规则与渲染无需联网；真实文献检索等任务仍需要其实际授权工具"
+            ],
+            [
+              "无全局安装",
+              "不写AGENTS.md、Skill目录、项目配置、默认模型或PATH"
+            ],
+            [
+              "适配而非原样打包",
+              "9份上游模块思路的本地适配版；不包含上游整套CLI／插件"
+            ],
+            [
+              "未执行实机联调",
+              "未在你的Windows、登录账户或Word版本验证；运行时必须如实预检"
+            ]
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "title": "本地测试记录",
+              "href": "docs/测试记录.md",
+              "description": "查看已执行范围和未执行事项"
+            },
+            {
+              "title": "模块路由索引",
+              "href": "modules/MODULE_ROUTER.md",
+              "description": "Astra及相关角色使用的紧凑索引"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

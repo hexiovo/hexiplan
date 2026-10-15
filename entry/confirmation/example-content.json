@@ -1,0 +1,93 @@
+{
+  "schema": "hexiplan.confirmation-content/1",
+  "report": {
+    "type": "solution",
+    "title": "示例：给测量记录补上可追溯的处理说明",
+    "subtitle": "写法与框架预览，不是真实项目方案或已执行结果。",
+    "meta": {
+      "run_id": "TEMPLATE",
+      "gate": "solution",
+      "step": "",
+      "revision": 1,
+      "date": "2026-09-30",
+      "status": "DRAFT",
+      "source_type": "TEMPLATE",
+      "is_template": true
+    }
+  },
+  "goal": "让你看清哪些记录会参与计算、哪些环节有变化，以及最后会得到什么。",
+  "version_changes": "本示例展示固定填充方式，没有修改真实数据，也没有实际运行分析。",
+  "changes": [
+    {
+      "part": "记录缺失的处理",
+      "before": "示例原流程没有明确区分完整记录和缺失记录。",
+      "after": "保留原始记录，单独标记缺失；本示例建议完整记录参与均值计算。",
+      "reason": "便于解释每个均值实际用了多少条数据。",
+      "impact": "结果同时显示参与计算的数量和未参与的数量，便于判断是否可比较。"
+    },
+    {
+      "part": "输出结果",
+      "before": "示例原流程只有一个均值。",
+      "after": "增加参与计算的记录数、缺失说明和处理规则。",
+      "reason": "把结果的依据写清楚。",
+      "impact": "你能看见结果和处理过程之间的对应关系。"
+    }
+  ],
+  "workflow": [
+    {
+      "step": "读取与范围确认",
+      "action": "读取用户选择的测量记录，核对单位与所需时间范围。",
+      "output": "保留原始记录，并得到本次使用的数据范围。",
+      "change": "沿用：本示例不改变数据来源。"
+    },
+    {
+      "step": "标记缺失",
+      "action": "保留缺失位置，在处理副本里单独标记，不把缺失当成零。",
+      "output": "完整记录列表与缺失记录说明。",
+      "change": "新增：明确标记与计数。"
+    },
+    {
+      "step": "计算与输出",
+      "action": "按你确认的缺失规则计算均值，列出实际参与的记录数。",
+      "output": "均值、有效数量、缺失数量和方法说明。",
+      "change": "改动：从只给一个数，变为连同计算依据一起输出。"
+    }
+  ],
+  "data_processing": {
+    "applicable": true,
+    "reason": "不涉及数据处理时填写原因并将applicable设为false。",
+    "data_range": "示例范围待真实需求指定；这里不预设真实文件或时间范围。",
+    "missing_and_outliers": "示例建议缺失记录保留并标记；异常值不自动删除，是否处理要根据来源和用户决定。",
+    "methods": [
+      {
+        "method": "完整记录的算术平均值",
+        "purpose": "把实际存在的测量值相加，再除以参与计算的数量。",
+        "parameters": "单位随原数据；缺失不计为零；本示例没有设定异常剔除阈值。",
+        "change": "改动在缺失记录处理与结果说明；平均值公式本身沿用。",
+        "impact": "结果代表完整记录；缺失较多时可能有偏差，需要说明这一限制。"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "question": "缺失记录怎样参与计算？",
+      "recommendation": "示例推荐先保留并标记，再按完整记录计算，同时报告缺失数量。",
+      "alternatives": "若有合理依据，也可另拟补值方案；需要先说明补值方法与影响。",
+      "impact": "不同处理规则会改变计算依据，不能未经确认直接补值。"
+    }
+  ],
+  "confirmation": {
+    "scope": "仅看这个写法示例；它不批准真实数据处理。",
+    "next_action": "真实任务中先确认数据范围与缺失处理方案，再按获批方案执行。",
+    "next_confirmation": "按你选择的项目规模：小项目最终统一验收，较大项目分步验收。"
+  },
+  "results": {
+    "applicable": false,
+    "items": [],
+    "limitations": ""
+  },
+  "supporting_blocks": [],
+  "workflow_fields": {
+    "blocking_questions": []
+  }
+}

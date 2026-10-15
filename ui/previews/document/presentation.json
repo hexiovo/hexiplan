@@ -1,0 +1,14 @@
+{
+  "layout": "document",
+  "palette": "pale-green",
+  "ui_version": "1.1.0",
+  "assets": {
+    "ui/layouts/document.html": "84709fb54618b71e89fe13c5545a787ac1ef93cf40d9a83ccdba14f274efa8e8",
+    "ui/assets/structure.css": "c2daf0844f6a646769a08c7576411e19031a5392ed18a8649a71b68d57f8e41d",
+    "ui/assets/structure.js": "ee69929c87e03b23133a680cee283ab25977e236c570aff1391f28903d5f122d",
+    "tools/review_assets/review.css": "572f2bf5317377ee818c51355c60bb47c13871fff104395b8055665b5f6f4b93",
+    "tools/review_assets/review.js": "49335d5a0955082f3370d92b22ca004b05d32625274d22eb20f6f077efdf2145"
+  },
+  "preview": true,
+  "feedback_ui_version": "1.0.0"
+}

@@ -1,0 +1,12 @@
+{
+  "gallery_images": 12,
+  "zoom": true,
+  "two_image_compare": true,
+  "third_selection_rejected": true,
+  "search": true,
+  "approval_text_bound_to_hash": true,
+  "feedback_not_approval": true,
+  "docx_embedded_images": 2,
+  "browser_errors": [],
+  "external_network_requests": []
+}

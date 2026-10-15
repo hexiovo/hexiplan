@@ -1,0 +1,179 @@
+{
+  "environment": "Linux system Chromium, Playwright",
+  "windows_tested": false,
+  "live_models_tested": false,
+  "pages": [
+    {
+      "title": "按需读取，分工不变 · HexiPlan",
+      "heading": "按需读取，分工不变",
+      "bodyWidth": 1440,
+      "viewWidth": 1440,
+      "sections": 6,
+      "file": "MODULES.html",
+      "script_errors": [],
+      "horizontal_overflow": false
+    },
+    {
+      "title": "HexiPlan 4.0 · 工作流与模板中心 · HexiPlan",
+      "heading": "HexiPlan 4.0 · 工作流与模板中心",
+      "bodyWidth": 1440,
+      "viewWidth": 1440,
+      "sections": 7,
+      "file": "START_HERE.html",
+      "script_errors": [],
+      "horizontal_overflow": false
+    },
+    {
+      "title": "需求理解与确认 · HexiPlan",
+      "heading": "需求理解与确认",
+      "bodyWidth": 1440,
+      "viewWidth": 1440,
+      "sections": 5,
+      "file": "templates/html/01_requirements.html",
+      "script_errors": [],
+      "horizontal_overflow": false
+    },
+    {
+      "title": "正式技术方案确认 · HexiPlan",
+      "heading": "正式技术方案确认",
+      "bodyWidth": 1440,
+      "viewWidth": 1440,
+      "sections": 5,
+      "file": "templates/html/02_solution.html",
+      "script_errors": [],
+      "horizontal_overflow": false
+    },
+    {
+      "title": "整体项目步骤规划 · HexiPlan",
+      "heading": "整体项目步骤规划",
+      "bodyWidth": 1440,
+      "viewWidth": 1440,
+      "sections": 4,
+      "file": "templates/html/03_roadmap.html",
+      "script_errors": [],
+      "horizontal_overflow": false
+    },
+    {
+      "title": "当前步骤的分解计划 · HexiPlan",
+      "heading": "当前步骤的分解计划",
+      "bodyWidth": 1440,
+      "viewWidth": 1440,
+      "sections": 5,
+      "file": "templates/html/04_step_plan.html",
+      "script_errors": [],
+      "horizontal_overflow": false
+    },
+    {
+      "title": "当前步骤交付与验收 · HexiPlan",
+      "heading": "当前步骤交付与验收",
+      "bodyWidth": 1440,
+      "viewWidth": 1440,
+      "sections": 7,
+      "file": "templates/html/05_acceptance.html",
+      "script_errors": [],
+      "horizontal_overflow": false
+    },
+    {
+      "title": "文献与候选方法比较 · HexiPlan",
+      "heading": "文献与候选方法比较",
+      "bodyWidth": 1440,
+      "viewWidth": 1440,
+      "sections": 6,
+      "file": "templates/html/06_research.html",
+      "script_errors": [],
+      "horizontal_overflow": false
+    },
+    {
+      "title": "数据处理结果 · APA 风格报告 · HexiPlan",
+      "heading": "数据处理结果 · APA 风格报告",
+      "bodyWidth": 1440,
+      "viewWidth": 1440,
+      "sections": 6,
+      "file": "templates/html/07_academic.html",
+      "script_errors": [],
+      "horizontal_overflow": false
+    },
+    {
+      "title": "UI 风格与交互确认 · HexiPlan",
+      "heading": "UI 风格与交互确认",
+      "bodyWidth": 1440,
+      "viewWidth": 1440,
+      "sections": 4,
+      "file": "templates/html/08_ui_review.html",
+      "script_errors": [],
+      "horizontal_overflow": false
+    },
+    {
+      "title": "任务状态与恢复检查 · HexiPlan",
+      "heading": "任务状态与恢复检查",
+      "bodyWidth": 1440,
+      "viewWidth": 1440,
+      "sections": 5,
+      "file": "templates/html/09_status.html",
+      "script_errors": [],
+      "horizontal_overflow": false
+    },
+    {
+      "title": "使用说明与操作文档 · HexiPlan",
+      "heading": "使用说明与操作文档",
+      "bodyWidth": 1440,
+      "viewWidth": 1440,
+      "sections": 6,
+      "file": "templates/html/10_guide.html",
+      "script_errors": [],
+      "horizontal_overflow": false
+    },
+    {
+      "title": "变更请求与阻塞说明 · HexiPlan",
+      "heading": "变更请求与阻塞说明",
+      "bodyWidth": 1440,
+      "viewWidth": 1440,
+      "sections": 5,
+      "file": "templates/html/11_change.html",
+      "script_errors": [],
+      "horizontal_overflow": false
+    },
+    {
+      "title": "最终交付与维护摘要 · HexiPlan",
+      "heading": "最终交付与维护摘要",
+      "bodyWidth": 1440,
+      "viewWidth": 1440,
+      "sections": 6,
+      "file": "templates/html/12_delivery.html",
+      "script_errors": [],
+      "horizontal_overflow": false
+    }
+  ],
+  "browser_events": [],
+  "docx_checks": {
+    "modules": {
+      "download_button": true,
+      "zip_crc": true,
+      "ooxml_parse": true,
+      "tables": 2,
+      "bytes": 28325,
+      "layout_in_microsoft_word_tested": false
+    },
+    "gallery": {
+      "download_button": true,
+      "zip_crc": true,
+      "ooxml_parse": true,
+      "embedded_images": 12,
+      "bytes": 1378909,
+      "layout_in_microsoft_word_tested": false
+    }
+  },
+  "file_navigation": "unavailable; used set_content with identical HTML",
+  "file_navigation_note": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///mnt/data/hexiplan_v4_build/HexiPlan/MODULES.html\nCall log:\n  - navigating to \"file:///mnt/data/hexiplan_v4_build/HexiPlan/MODULES.html\", waiting until \"load\"\n",
+  "search": "matched section filtering and reset passed",
+  "mobile_modules_390px": "no whole-page horizontal overflow",
+  "gallery": {
+    "images": 12,
+    "single_zoom": true,
+    "pair_comparison": true,
+    "third_selection_rejected": true
+  },
+  "documentation_has_no_approval_buttons": true,
+  "external_http_requests": [],
+  "passed": true
+}

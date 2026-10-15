@@ -1,0 +1,74 @@
+{
+  "schema": "hexiplan.confirmation-content/1",
+  "report": {
+    "type": "solution",
+    "title": "这次准备怎么改",
+    "subtitle": "先看修改内容与处理流程，再确认这次的范围。",
+    "meta": {
+      "run_id": "TEMPLATE",
+      "gate": "solution",
+      "step": "",
+      "revision": 1,
+      "date": "待填写日期",
+      "status": "DRAFT",
+      "source_type": "TEMPLATE",
+      "is_template": true
+    }
+  },
+  "goal": "待填写：这次希望解决什么问题。",
+  "version_changes": "待填写：与上版相比改变了什么；首版说明这是第一次提交。",
+  "changes": [
+    {
+      "part": "待填写：功能、页面或数据环节",
+      "before": "待填写：现在怎样",
+      "after": "待填写：准备改成什么",
+      "reason": "待填写：为什么这样改",
+      "impact": "待填写：用户或结果会有什么变化"
+    }
+  ],
+  "workflow": [
+    {
+      "step": "待填写：环节名称",
+      "action": "待填写：按实际顺序说明具体做什么",
+      "output": "待填写：这一步得到什么",
+      "change": "待填写：沿用/改动/新增，以及原来怎样、现在怎样"
+    }
+  ],
+  "data_processing": {
+    "applicable": true,
+    "reason": "不涉及数据处理时填写原因并将applicable设为false。",
+    "data_range": "待填写：使用的数据来源、范围、纳入/排除条件。",
+    "missing_and_outliers": "待填写：缺失或异常数据如何处理及理由。",
+    "methods": [
+      {
+        "method": "待填写：准确的方法名称",
+        "purpose": "待填写：用普通话解释它做什么、为什么需要",
+        "parameters": "待填写：会影响结果的实际参数、单位或规则",
+        "change": "待填写：原来怎样→准备怎样；未改则说明沿用",
+        "impact": "待填写：对结果的影响与限制"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "question": "待填写：真正需要用户决定的事项",
+      "recommendation": "待填写：推荐方案和理由",
+      "alternatives": "待填写：有意义的其他选择；没有则说明没有",
+      "impact": "待填写：各选择的实际差别"
+    }
+  ],
+  "confirmation": {
+    "scope": "待填写：本次批准覆盖哪些内容",
+    "next_action": "待填写：确认后具体做什么",
+    "next_confirmation": "待填写：下一次需要用户确认的时点"
+  },
+  "results": {
+    "applicable": false,
+    "items": [],
+    "limitations": ""
+  },
+  "supporting_blocks": [],
+  "workflow_fields": {
+    "blocking_questions": []
+  }
+}

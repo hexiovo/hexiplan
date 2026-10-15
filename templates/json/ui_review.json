@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "type": "ui_review",
+  "title": "UI 风格与交互确认",
+  "subtitle": "在实现前集中确认界面方向。此处的报告样式不是业务软件默认UI，候选应来自本项目需求。",
+  "meta": {
+    "run_id": "TEMPLATE",
+    "gate": "",
+    "step": "",
+    "revision": 1,
+    "date": "按任务填写",
+    "status": "DRAFT",
+    "source_type": "TEMPLATE",
+    "is_template": true
+  },
+  "sections": [
+    {
+      "title": "已确认的使用场景",
+      "blocks": [
+        {
+          "type": "kv",
+          "items": [
+            {
+              "label": "主要用户与屏幕",
+              "value": "待填写。"
+            },
+            {
+              "label": "核心操作路径",
+              "value": "待填写。"
+            },
+            {
+              "label": "必须保留的交互",
+              "value": "待填写。"
+            },
+            {
+              "label": "外观偏好与限制",
+              "value": "待由用户选择，不由执行代理猜测。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "候选界面总体预览",
+      "blocks": [
+        {
+          "type": "gallery",
+          "title": "截图总体预览",
+          "images": []
+        },
+        {
+          "type": "callout",
+          "text": "设计稿应标为“原型/设计稿”，真实运行截图应标明版本与来源。勾选两张截图可并排比较。",
+          "title": "",
+          "level": "info"
+        }
+      ]
+    },
+    {
+      "title": "关键选择",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "维度",
+            "候选/建议",
+            "权衡",
+            "用户决定"
+          ],
+          "rows": [
+            [
+              "整体风格",
+              "待提供候选",
+              "可读性、密度与平台一致性",
+              "待确认"
+            ],
+            [
+              "导航与操作流程",
+              "待提供候选",
+              "效率与防误操作",
+              "待确认"
+            ],
+            [
+              "状态/错误提示",
+              "待提供候选",
+              "可理解与可恢复性",
+              "待确认"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "确认后实施边界",
+      "blocks": [
+        {
+          "type": "callout",
+          "text": "UI选择最终归入正式方案或当前步骤计划的审批版本；本比较材料本身不自动授权实现。改变已确认风格需再次确认。",
+          "title": "",
+          "level": "info"
+        }
+      ]
+    }
+  ],
+  "blocking_questions": []
+}

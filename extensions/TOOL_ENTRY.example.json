@@ -1,0 +1,35 @@
+{
+  "id": "REPLACE_TOOL_ID",
+  "kind": "stdio_mcp",
+  "source_url": "https://OFFICIAL_SOURCE",
+  "version": "REPLACE_PINNED_VERSION",
+  "license": "REPLACE_VERIFIED_LICENSE",
+  "purpose": "为什么现有脚本/CLI不够",
+  "install_argv": [
+    "REPLACE_EXECUTABLE",
+    "REPLACE_ARGUMENT"
+  ],
+  "start_argv": [
+    "REPLACE_EXECUTABLE",
+    "REPLACE_ARGUMENT"
+  ],
+  "allowed_domains": [
+    "REPLACE_DOMAIN"
+  ],
+  "read_dirs": [
+    "REPLACE_AUTHORIZED_PATH"
+  ],
+  "write_dirs": [
+    "REPLACE_EXTENSIONS_SUBDIR"
+  ],
+  "estimated_download_mb": null,
+  "estimated_cache_mb": null,
+  "data_sent": [
+    "说明会发送的数据类别"
+  ],
+  "credentials": "仅记录所需凭据类型，不放凭据本体",
+  "cost": "说明费用或无费用的核验依据",
+  "rollback": "只停止任务自己的进程；保留其他任务仍引用的缓存",
+  "telemetry": "记录可控制的遥测开关及关闭状态",
+  "external_writes": "若无法限制外部缓存，事先说明具体位置和理由"
+}

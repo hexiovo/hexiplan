@@ -1,0 +1,56 @@
+[
+  {
+    "layout": "workbench",
+    "desktop_overflow": false,
+    "errors": [],
+    "content_sections": 6,
+    "next_shows_second": true,
+    "lightbox": true,
+    "compare_images": 2,
+    "search_finds_table": true,
+    "docx_bytes": 167281,
+    "mobile_overflow": false
+  },
+  {
+    "layout": "document",
+    "desktop_overflow": false,
+    "errors": [],
+    "content_sections": 6,
+    "all_sections_visible": true,
+    "search_finds_table": true,
+    "docx_bytes": 167281,
+    "mobile_overflow": false
+  },
+  {
+    "layout": "wizard",
+    "desktop_overflow": false,
+    "errors": [],
+    "content_sections": 6,
+    "next_shows_second": true,
+    "lightbox": true,
+    "compare_images": 2,
+    "search_finds_table": true,
+    "docx_bytes": 167281,
+    "mobile_overflow": false
+  },
+  {
+    "layout": "evidence",
+    "desktop_overflow": false,
+    "errors": [],
+    "content_sections": 6,
+    "asset_switch": true,
+    "lightbox": true,
+    "logs_tab": true,
+    "full_report": true,
+    "back_to_screenshot": true,
+    "search_finds_table": true,
+    "docx_bytes": 167281,
+    "mobile_overflow": false
+  },
+  {
+    "combined_preview": true,
+    "four_layout_switches": "PASS",
+    "narrow_screen_toggle": "PASS",
+    "errors": []
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "palette": "pale-green",
+  "selection_status": "USER_CHOICE_PENDING",
+  "layouts": [
+    {
+      "id": "workbench",
+      "name": "分区工作台",
+      "shell": "ui/layouts/workbench.html"
+    },
+    {
+      "id": "document",
+      "name": "连续文档",
+      "shell": "ui/layouts/document.html"
+    },
+    {
+      "id": "wizard",
+      "name": "逐步向导",
+      "shell": "ui/layouts/wizard.html"
+    },
+    {
+      "id": "evidence",
+      "name": "截图审阅台",
+      "shell": "ui/layouts/evidence.html"
+    }
+  ]
+}

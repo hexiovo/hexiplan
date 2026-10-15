@@ -1,0 +1,9 @@
+仅对本任务显式启用 HexiPlan。
+工具包位置：<替换为我的 HexiPlan 目录>
+业务项目位置：<替换为本任务项目目录>
+
+请先读取工具包中的 hexiplan.md 与 modules/MODULE_ROUTER.md，并核对当前会话是否真的具备 Astra-high / Sol-high / Luna-max 的指定模型与代理路由。读取MD本身不代表模型已切换；若条件不满足，停止并告诉我双击工具包的start-hexiplan.cmd，不在工具里嵌套启动Codex，也不改全局/项目配置。
+
+具备条件后，从需求理解开始，允许充分提问，各关通过HTML由我确认；按任务选择本地适配模块，不一次加载全部规则，不安装上游Skills。
+
+本次需求：<填写完整需求>

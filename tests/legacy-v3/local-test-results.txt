@@ -1,0 +1,45 @@
+test_acceptance_requires_cleanup_record (__main__.ToolkitTests.test_acceptance_requires_cleanup_record) ... ok
+test_actual_synthetic_signal_known_answers (__main__.ToolkitTests.test_actual_synthetic_signal_known_answers) ... ok
+test_actual_synthetic_table_known_answers (__main__.ToolkitTests.test_actual_synthetic_table_known_answers) ... ok
+test_agent_cannot_use_both_model_pools (__main__.ToolkitTests.test_agent_cannot_use_both_model_pools) ... ok
+test_all_twelve_templates_parse (__main__.ToolkitTests.test_all_twelve_templates_parse) ... ok
+test_approval_needs_user_text (__main__.ToolkitTests.test_approval_needs_user_text) ... ok
+test_approval_version_must_match (__main__.ToolkitTests.test_approval_version_must_match) ... ok
+test_bad_table_width_rejected (__main__.ToolkitTests.test_bad_table_width_rejected) ... ok
+test_blocking_questions_prevent_submit (__main__.ToolkitTests.test_blocking_questions_prevent_submit) ... ok
+test_browser_and_memory_caps (__main__.ToolkitTests.test_browser_and_memory_caps) ... ok
+test_cleanup_outside_report_refused (__main__.ToolkitTests.test_cleanup_outside_report_refused) ... ok
+test_corrupt_committed_journal_fails (__main__.ToolkitTests.test_corrupt_committed_journal_fails) ... ok
+test_existing_run_never_overwritten (__main__.ToolkitTests.test_existing_run_never_overwritten) ... ok
+test_explicit_natural_mapping_bound_to_hash (__main__.ToolkitTests.test_explicit_natural_mapping_bound_to_hash) ... ok
+test_full_two_step_lifecycle (__main__.ToolkitTests.test_full_two_step_lifecycle) ... ok
+test_image_escape_rejected (__main__.ToolkitTests.test_image_escape_rejected) ... ok
+test_incremental_pool_switch_is_rejected (__main__.ToolkitTests.test_incremental_pool_switch_is_rejected) ... ok
+test_json_hash_tamper_rejected (__main__.ToolkitTests.test_json_hash_tamper_rejected) ... ok
+test_launcher_scope_and_models (__main__.ToolkitTests.test_launcher_scope_and_models) ... ok
+test_luna_ceiling_six (__main__.ToolkitTests.test_luna_ceiling_six) ... ok
+test_no_execution_before_approval (__main__.ToolkitTests.test_no_execution_before_approval) ... ok
+test_no_gate_skipping (__main__.ToolkitTests.test_no_gate_skipping) ... ok
+test_path_traversal_rejected (__main__.ToolkitTests.test_path_traversal_rejected) ... ok
+test_register_temp_outside_tmp_refused (__main__.ToolkitTests.test_register_temp_outside_tmp_refused) ... ok
+test_reject_requires_new_version (__main__.ToolkitTests.test_reject_requires_new_version) ... ok
+test_renderer_never_overwrites (__main__.ToolkitTests.test_renderer_never_overwrites) ... ok
+test_replan_does_not_approve_or_reset_retries (__main__.ToolkitTests.test_replan_does_not_approve_or_reset_retries) ... ok
+test_report_run_must_match (__main__.ToolkitTests.test_report_run_must_match) ... ok
+test_roadmap_dependencies_validated (__main__.ToolkitTests.test_roadmap_dependencies_validated) ... ok
+test_safe_cleanup_preserves_unregistered_changed_referenced (__main__.ToolkitTests.test_safe_cleanup_preserves_unregistered_changed_referenced) ... ok
+test_script_payload_is_escaped (__main__.ToolkitTests.test_script_payload_is_escaped) ... ok
+test_snapshot_recovery (__main__.ToolkitTests.test_snapshot_recovery) ... ok
+test_sol_budget_is_shared (__main__.ToolkitTests.test_sol_budget_is_shared) ... ok
+test_submitted_html_mutation_rejected (__main__.ToolkitTests.test_submitted_html_mutation_rejected) ... ok
+test_symlink_rejected (__main__.ToolkitTests.test_symlink_rejected) ... ok
+test_templates_cannot_be_approved (__main__.ToolkitTests.test_templates_cannot_be_approved) ... ok
+test_two_repairs_then_block (__main__.ToolkitTests.test_two_repairs_then_block) ... ok
+test_unrun_required_check_cannot_pass (__main__.ToolkitTests.test_unrun_required_check_cannot_pass) ... ok
+test_unsafe_image_rejected (__main__.ToolkitTests.test_unsafe_image_rejected) ... ok
+test_verification_waits_for_all_packages (__main__.ToolkitTests.test_verification_waits_for_all_packages) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.117s
+
+OK

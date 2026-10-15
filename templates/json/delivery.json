@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "type": "delivery",
+  "title": "最终交付与维护摘要",
+  "subtitle": "汇总已验收的各步骤与最终产物，不再额外启动一轮全项目细节审计。",
+  "meta": {
+    "run_id": "TEMPLATE",
+    "gate": "",
+    "step": "",
+    "revision": 1,
+    "date": "按任务填写",
+    "status": "DRAFT",
+    "source_type": "TEMPLATE",
+    "is_template": true
+  },
+  "sections": [
+    {
+      "title": "交付概览",
+      "blocks": [
+        {
+          "type": "kv",
+          "items": [
+            {
+              "label": "原始目标",
+              "value": "引用最终确认需求。"
+            },
+            {
+              "label": "已完成范围",
+              "value": "按各步真实验收结果汇总。"
+            },
+            {
+              "label": "未包含范围",
+              "value": "明确不做事项和剩余限制。"
+            },
+            {
+              "label": "最终版本",
+              "value": "填写代码/文件版本，不擅自提交或发布。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "步骤验收记录",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "步骤",
+            "已批准报告",
+            "内容版本",
+            "验收记录"
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "title": "最终截图与结果总览",
+      "blocks": [
+        {
+          "type": "gallery",
+          "title": "截图总体预览",
+          "images": []
+        }
+      ]
+    },
+    {
+      "title": "交付文件索引",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "内容",
+            "位置",
+            "说明",
+            "保留理由"
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "title": "复现与运行",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "引用既有使用说明、关键环境、运行命令和结构化结果；不要重新发明文档模板。"
+        }
+      ]
+    },
+    {
+      "title": "最终清理与后续边界",
+      "blocks": [
+        {
+          "type": "callout",
+          "text": "保留原始数据、审批版本、真实证据和复现条件；清理仅限登记的可再生临时文件。本任务到此结束，不自动把HexiPlan延伸到其它任务。",
+          "title": "",
+          "level": "info"
+        }
+      ]
+    }
+  ],
+  "blocking_questions": []
+}

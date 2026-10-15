@@ -1,0 +1,57 @@
+{
+  "browser": "144.0.7559.96",
+  "results": [
+    {
+      "case": "export_json",
+      "pass": true,
+      "bytes": 2017
+    },
+    {
+      "case": "export_md",
+      "pass": true,
+      "bytes": 1276
+    },
+    {
+      "case": "export_txt",
+      "pass": true,
+      "bytes": 1268
+    },
+    {
+      "case": "export_docx",
+      "pass": true,
+      "bytes": 16102
+    },
+    {
+      "case": "draft_persist_and_unsaved_export_guard",
+      "pass": true
+    },
+    {
+      "case": "workbench_desktop_mobile_form",
+      "pass": true,
+      "runtime_errors": []
+    },
+    {
+      "case": "document_desktop_mobile_form",
+      "pass": true,
+      "runtime_errors": []
+    },
+    {
+      "case": "wizard_desktop_mobile_form",
+      "pass": true,
+      "runtime_errors": []
+    },
+    {
+      "case": "evidence_desktop_mobile_form",
+      "pass": true,
+      "runtime_errors": []
+    },
+    {
+      "case": "explicit_ack_and_unresolved_blockers",
+      "pass": true
+    }
+  ],
+  "initial_page_errors": [],
+  "actual_models_called": false,
+  "loading": "set_content, no URL navigation",
+  "storage_test": "memory localStorage test double, not persistence verification on user machine"
+}

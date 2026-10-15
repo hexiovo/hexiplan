@@ -1,0 +1,86 @@
+[
+  {
+    "type": "requirements",
+    "title": "需求理解与确认",
+    "description": "先对齐目标、边界和偏好，再决定技术方案。这里记录理解，不提前承诺实现。",
+    "json": "json/requirements.json",
+    "html": "html/01_requirements.html"
+  },
+  {
+    "type": "solution",
+    "title": "正式技术方案确认",
+    "description": "把技术路线、界面方向和关键权衡放在同一页，单独确认后再组织整体步骤。",
+    "json": "json/solution.json",
+    "html": "html/02_solution.html"
+  },
+  {
+    "type": "roadmap",
+    "title": "整体项目步骤规划",
+    "description": "步骤由 Astra 依据本项目需求产生。此框架不预设步骤名称、数量或固定开发顺序。",
+    "json": "json/roadmap.json",
+    "html": "html/03_roadmap.html"
+  },
+  {
+    "type": "step_plan",
+    "title": "当前步骤的分解计划",
+    "description": "Astra 定义工作包与关键边界；Sol 负责细节。你批准当前版本后，才开始这一轮实施。",
+    "json": "json/step_plan.json",
+    "html": "html/04_step_plan.html"
+  },
+  {
+    "type": "acceptance",
+    "title": "当前步骤交付与验收",
+    "description": "先看成果和截图总览，再看验证、问题与清理记录。确认这一页，不等于批准下一步立即实施。",
+    "json": "json/acceptance.json",
+    "html": "html/05_acceptance.html"
+  },
+  {
+    "type": "research",
+    "title": "文献与候选方法比较",
+    "description": "将证据、适用条件和方法选择分开呈现。阅读充分，但不为凑篇数引入无关研究。",
+    "json": "json/research.json",
+    "html": "html/06_research.html"
+  },
+  {
+    "type": "academic",
+    "title": "数据处理结果 · APA 风格报告",
+    "description": "正文、统计表与图形使用同一份已计算结果；模拟验证数据与真实研究结果必须明确区分。",
+    "json": "json/academic.json",
+    "html": "html/07_academic.html"
+  },
+  {
+    "type": "ui_review",
+    "title": "UI 风格与交互确认",
+    "description": "在实现前集中确认界面方向。此处的报告样式不是业务软件默认UI，候选应来自本项目需求。",
+    "json": "json/ui_review.json",
+    "html": "html/08_ui_review.html"
+  },
+  {
+    "type": "status",
+    "title": "任务状态与恢复检查",
+    "description": "用持久记录恢复工作，不靠模糊的聊天印象；已完成事项不重做，未批准关口不跳过。",
+    "json": "json/status.json",
+    "html": "html/09_status.html"
+  },
+  {
+    "type": "guide",
+    "title": "使用说明与操作文档",
+    "description": "把安装条件、最短操作路径、输入输出与常见错误集中说明，供长期复用。",
+    "json": "json/guide.json",
+    "html": "html/10_guide.html"
+  },
+  {
+    "type": "change",
+    "title": "变更请求与阻塞说明",
+    "description": "在范围、方法、UI或关键依赖变化时，清楚解释为什么暂停，以及需要你决定什么。",
+    "json": "json/change.json",
+    "html": "html/11_change.html"
+  },
+  {
+    "type": "delivery",
+    "title": "最终交付与维护摘要",
+    "description": "汇总已验收的各步骤与最终产物，不再额外启动一轮全项目细节审计。",
+    "json": "json/delivery.json",
+    "html": "html/12_delivery.html"
+  }
+]

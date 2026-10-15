@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "version": "4.0.0",
+  "explicit_hexiplan_only": true,
+  "register_as_skill": false,
+  "upstream_install_required": false,
+  "runtime_network_required_for_rules": false,
+  "modules": [
+    {
+      "id": "humanizer-zh",
+      "title": "中文自然表达",
+      "path": "modules/writing/HUMANIZER_ZH.md",
+      "source_id": "humanizer-zh",
+      "mode": "primary",
+      "local_adaptation": true,
+      "sha256": "4c62a8c1c853766084a9d390c1f3584dd1d590d8a0a51834435faa076d3a482c"
+    },
+    {
+      "id": "humanizer-en",
+      "title": "英文自然表达（备用）",
+      "path": "modules/writing/HUMANIZER_EN.md",
+      "source_id": "humanizer-en",
+      "mode": "language-specific",
+      "local_adaptation": true,
+      "sha256": "1cadac2bc842ce64e120db838602467c60acf6ac9c787b3ccee4513fcba88bc6"
+    },
+    {
+      "id": "scientific-writing",
+      "title": "科学写作",
+      "path": "modules/science/SCIENTIFIC_WRITING.md",
+      "source_id": "scientific-writing",
+      "mode": "task-specific",
+      "local_adaptation": true,
+      "sha256": "b8245c950747b36df5d9dcb69e14d62faaa8a6624c5ecd6b95d2c9fdd3b2c14b"
+    },
+    {
+      "id": "literature-review",
+      "title": "文献与方法综述",
+      "path": "modules/science/LITERATURE_REVIEW.md",
+      "source_id": "literature-review",
+      "mode": "task-specific",
+      "local_adaptation": true,
+      "sha256": "ed46bdf24ff7108661cd2c15eac805656147c12233e44e58610598be0ec76214"
+    },
+    {
+      "id": "citation-management",
+      "title": "引用核验与复用",
+      "path": "modules/science/CITATION_MANAGEMENT.md",
+      "source_id": "citation-management",
+      "mode": "task-specific",
+      "local_adaptation": true,
+      "sha256": "4e03570515d4f0d61588add13d36987af0b9e9df9ac38d458846cd1c57842b42"
+    },
+    {
+      "id": "scientific-critical-thinking",
+      "title": "科学证据与方法判断",
+      "path": "modules/science/SCIENTIFIC_CRITICAL_THINKING.md",
+      "source_id": "scientific-critical-thinking",
+      "mode": "task-specific",
+      "local_adaptation": true,
+      "sha256": "b41a6c94a2d6b4c6bdfef67c1330358845322eef35de1f0419331a62bf2d68ae"
+    },
+    {
+      "id": "scientific-visualization",
+      "title": "科研图形",
+      "path": "modules/science/SCIENTIFIC_VISUALIZATION.md",
+      "source_id": "scientific-visualization",
+      "mode": "task-specific",
+      "local_adaptation": true,
+      "sha256": "c6e83bab555c927c5b6a9ab63800382a6ca50560d8032437fdbe4278e1d267a1"
+    },
+    {
+      "id": "frontend-design",
+      "title": "业务UI设计",
+      "path": "modules/ui/FRONTEND_DESIGN.md",
+      "source_id": "frontend-design",
+      "mode": "task-specific",
+      "local_adaptation": true,
+      "sha256": "87776d2e4d30773d36bc297c27e518d767ca04f8df22572adca9470125406313"
+    },
+    {
+      "id": "systematic-debugging",
+      "title": "证据导向调试",
+      "path": "modules/engineering/SYSTEMATIC_DEBUGGING.md",
+      "source_id": "systematic-debugging",
+      "mode": "on-failure",
+      "local_adaptation": true,
+      "sha256": "e9c7ba1e469084a266c6c1c7aaeffd97b4af7b868d32663369ca49042e4287bd"
+    },
+    {
+      "id": "academic-fidelity",
+      "title": "科学含义保护",
+      "path": "modules/guards/ACADEMIC_FIDELITY.md",
+      "source_id": null,
+      "mode": "guard",
+      "local_adaptation": false,
+      "sha256": "f45c6392f6d20d0fcb56c2360062da7d75dcf5791d0282b7f968cfe8eb6255c1"
+    },
+    {
+      "id": "report-style",
+      "title": "报告表达与冻结保护",
+      "path": "modules/guards/REPORT_STYLE.md",
+      "source_id": null,
+      "mode": "guard",
+      "local_adaptation": false,
+      "sha256": "13e8e13d850ea90a77965248599de872164815156750de7c04e817bb4208e0bb"
+    }
+  ],
+  "reference_only": [
+    {
+      "id": "stop-slop",
+      "path": "modules/reference/STOP_SLOP_NOTE.md",
+      "automatically_selectable": false
+    }
+  ]
+}

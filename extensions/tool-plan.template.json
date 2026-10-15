@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "plan_id": "tools-v1",
+  "tools": [],
+  "budget": {
+    "download_mb": 0,
+    "cache_mb": 0,
+    "paid_cost": 0
+  },
+  "note": "Fill tools only when needed. Expose the exact same plan in the visible solution HTML before approval."
+}

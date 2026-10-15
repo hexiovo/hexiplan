@@ -1,0 +1,92 @@
+{
+  "templates": [
+    {
+      "file": "01_requirements.html",
+      "errors": [],
+      "sections": 5,
+      "overflow": false,
+      "reportType": "requirements"
+    },
+    {
+      "file": "02_solution.html",
+      "errors": [],
+      "sections": 5,
+      "overflow": false,
+      "reportType": "solution"
+    },
+    {
+      "file": "03_roadmap.html",
+      "errors": [],
+      "sections": 4,
+      "overflow": false,
+      "reportType": "roadmap"
+    },
+    {
+      "file": "04_step_plan.html",
+      "errors": [],
+      "sections": 5,
+      "overflow": false,
+      "reportType": "step_plan"
+    },
+    {
+      "file": "05_acceptance.html",
+      "errors": [],
+      "sections": 7,
+      "overflow": false,
+      "reportType": "acceptance"
+    },
+    {
+      "file": "06_research.html",
+      "errors": [],
+      "sections": 6,
+      "overflow": false,
+      "reportType": "research"
+    },
+    {
+      "file": "07_academic.html",
+      "errors": [],
+      "sections": 6,
+      "overflow": false,
+      "reportType": "academic"
+    },
+    {
+      "file": "08_ui_review.html",
+      "errors": [],
+      "sections": 4,
+      "overflow": false,
+      "reportType": "ui_review"
+    },
+    {
+      "file": "09_status.html",
+      "errors": [],
+      "sections": 5,
+      "overflow": false,
+      "reportType": "status"
+    },
+    {
+      "file": "10_guide.html",
+      "errors": [],
+      "sections": 6,
+      "overflow": false,
+      "reportType": "guide"
+    },
+    {
+      "file": "11_change.html",
+      "errors": [],
+      "sections": 5,
+      "overflow": false,
+      "reportType": "change"
+    },
+    {
+      "file": "12_delivery.html",
+      "errors": [],
+      "sections": 6,
+      "overflow": false,
+      "reportType": "delivery"
+    }
+  ],
+  "mobile": {
+    "overflow": false
+  },
+  "method": "System Chromium; HTML set_content because file navigation is blocked by host policy."
+}

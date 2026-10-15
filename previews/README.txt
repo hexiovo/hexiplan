@@ -1,0 +1,1 @@
+These are actual Chromium renders of the twelve bundled HTML templates at 1440×1040. They are toolkit previews, not business UI or scientific findings. Captured during package QA on 2026-09-27. catalog-overview.jpg is a contact sheet of these same captures. No font files are distributed.

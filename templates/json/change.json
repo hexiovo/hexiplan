@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "type": "change",
+  "title": "变更请求与阻塞说明",
+  "subtitle": "在范围、方法、UI或关键依赖变化时，清楚解释为什么暂停，以及需要你决定什么。",
+  "meta": {
+    "run_id": "TEMPLATE",
+    "gate": "",
+    "step": "",
+    "revision": 1,
+    "date": "按任务填写",
+    "status": "DRAFT",
+    "source_type": "TEMPLATE",
+    "is_template": true
+  },
+  "sections": [
+    {
+      "title": "当前阻塞",
+      "blocks": [
+        {
+          "type": "kv",
+          "items": [
+            {
+              "label": "发生在哪一步",
+              "value": "待填写。"
+            },
+            {
+              "label": "问题与影响",
+              "value": "待填写真实错误和影响范围。"
+            },
+            {
+              "label": "已有修复尝试",
+              "value": "待引用最多两轮修复与复测记录。"
+            },
+            {
+              "label": "为什么不能继续",
+              "value": "待说明关键验收条件尚未满足。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "修复证据",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "轮次",
+            "改动",
+            "复测结果",
+            "日志/截图"
+          ],
+          "rows": []
+        },
+        {
+          "type": "gallery",
+          "title": "截图总体预览",
+          "images": []
+        }
+      ]
+    },
+    {
+      "title": "需要批准的变更",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "变更项",
+            "原方案",
+            "拟议方案",
+            "影响/代价"
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "title": "可选处理方式",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "根据实际原因给出可行备选，必要时升级Sol执行或重新设计。不能通过重开run、换代理、改阈值或隐瞒失败来绕过修复上限。"
+        }
+      ]
+    },
+    {
+      "title": "批准边界",
+      "blocks": [
+        {
+          "type": "callout",
+          "text": "本说明供用户决定是否重新规划。若同意变更，由 Astra 提交新的正式方案或步骤计划版本，再走对应批准流程。",
+          "title": "",
+          "level": "info"
+        }
+      ]
+    }
+  ],
+  "blocking_questions": []
+}

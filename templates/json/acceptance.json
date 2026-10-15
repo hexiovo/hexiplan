@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "type": "acceptance",
+  "title": "当前步骤交付与验收",
+  "subtitle": "先看成果和截图总览，再看验证、问题与清理记录。确认这一页，不等于批准下一步立即实施。",
+  "meta": {
+    "run_id": "TEMPLATE",
+    "gate": "step_acceptance",
+    "step": "STEP_ID",
+    "revision": 1,
+    "date": "按任务填写",
+    "status": "DRAFT",
+    "source_type": "TEMPLATE",
+    "is_template": true
+  },
+  "sections": [
+    {
+      "title": "本步交付摘要",
+      "blocks": [
+        {
+          "type": "metrics",
+          "items": [
+            {
+              "label": "已完成工作包",
+              "value": "待统计"
+            },
+            {
+              "label": "必要验收条件",
+              "value": "待校验"
+            },
+            {
+              "label": "修复轮次",
+              "value": "0 / 2"
+            },
+            {
+              "label": "清理释放空间",
+              "value": "待记录"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "待填写与已批准 step_plan 对照的简短完成说明。"
+        }
+      ]
+    },
+    {
+      "title": "截图总体预览",
+      "blocks": [
+        {
+          "type": "gallery",
+          "title": "截图总体预览",
+          "images": []
+        }
+      ]
+    },
+    {
+      "title": "交付物与运行方式",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "交付物",
+            "位置/入口",
+            "如何查看或运行",
+            "对应需求"
+          ],
+          "rows": [
+            [
+              "待填写实际产物",
+              "待填写相对路径",
+              "待填写可复现操作",
+              "待对应已确认需求"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "独立整合校验",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "验收项",
+            "结果",
+            "证据类型",
+            "日志/图形",
+            "限制"
+          ],
+          "rows": [
+            [
+              "待填写真实检验",
+              "NOT_RUN",
+              "待填写REAL/SYNTHETIC_ONLY等",
+              "待填真实证据路径",
+              "不能将静态阅读写为运行通过"
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "text": "必须先收齐各组结果，再由独立 Sol 校验；最多两轮定向修复。关键阻塞或必需项目未验证时，不申报本步通过。",
+          "title": "",
+          "level": "warning"
+        }
+      ]
+    },
+    {
+      "title": "问题、修复与已知限制",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "问题",
+            "影响",
+            "修复轮次",
+            "复测结果",
+            "剩余限制"
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "title": "临时文件清理",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "文件或类别",
+            "处理",
+            "释放字节",
+            "保留原因/依据"
+          ],
+          "rows": []
+        },
+        {
+          "type": "text",
+          "text": "原始数据、关键证据、截图、审批版本和复现材料保留。清理只限本次登记的 run/tmp 文件，报告资源再次检查。"
+        }
+      ]
+    },
+    {
+      "title": "请你确认",
+      "blocks": [
+        {
+          "type": "callout",
+          "text": "确认当前步骤成果后，Astra 进入下一步的分解规划，并把下一步计划再次交给你批准。若需要调整，请在本页底部填写修改意见并发回 Codex。",
+          "title": "",
+          "level": "info"
+        }
+      ]
+    }
+  ],
+  "blocking_questions": []
+}

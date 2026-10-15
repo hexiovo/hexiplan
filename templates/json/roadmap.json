@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "type": "roadmap",
+  "title": "整体项目步骤规划",
+  "subtitle": "步骤由 Astra 依据本项目需求产生。此框架不预设步骤名称、数量或固定开发顺序。",
+  "meta": {
+    "run_id": "TEMPLATE",
+    "gate": "roadmap",
+    "step": "",
+    "revision": 1,
+    "date": "按任务填写",
+    "status": "DRAFT",
+    "source_type": "TEMPLATE",
+    "is_template": true
+  },
+  "sections": [
+    {
+      "title": "项目目标与边界",
+      "blocks": [
+        {
+          "type": "kv",
+          "items": [
+            {
+              "label": "采用方案",
+              "value": "待引用已确认的 solution 版本与内容标识。"
+            },
+            {
+              "label": "最终交付",
+              "value": "待填写实际交付物。"
+            },
+            {
+              "label": "步骤组织原则",
+              "value": "依赖清晰、可分步验收，不机械拆分任务。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "整体步骤清单",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "步骤ID",
+            "本步目标",
+            "主要工作范围",
+            "前置依赖",
+            "交付与验收"
+          ],
+          "rows": []
+        },
+        {
+          "type": "callout",
+          "text": "由 Astra 填充 roadmap_steps；每项需 id、title、dependencies。依赖项必须排在当前项之前，步骤数量不受此页面限制。",
+          "title": "",
+          "level": "info"
+        }
+      ]
+    },
+    {
+      "title": "并发与资源",
+      "blocks": [
+        {
+          "type": "metrics",
+          "items": [
+            {
+              "label": "Sol · 全任务共享",
+              "value": "≤ 3",
+              "note": "含管理、研究、校验、报告和重要执行"
+            },
+            {
+              "label": "Luna · 全任务共享",
+              "value": "≤ 6",
+              "note": "非每个Sol分别获得6个"
+            },
+            {
+              "label": "浏览器自动化会话",
+              "value": "≤ 2",
+              "note": "优先隔离自动化"
+            },
+            {
+              "label": "高内存 / GPU密集",
+              "value": "≤ 1",
+              "note": "相关任务排队"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "确认后的下一步",
+      "blocks": [
+        {
+          "type": "callout",
+          "text": "确认整体步骤后，仅进入第一个实际步骤的分解规划。Astra 提交该步骤计划并再次获批后，下层才能实现。",
+          "title": "",
+          "level": "info"
+        }
+      ]
+    }
+  ],
+  "blocking_questions": [],
+  "roadmap_steps": []
+}

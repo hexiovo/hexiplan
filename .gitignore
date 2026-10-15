@@ -1,0 +1,43 @@
+# Task runs and personal deployment records (any level)
+[Rr][Uu][Nn][Ss]/
+[Rr][Uu][Nn]/
+deployment/
+publication/
+# Tool sessions, profiles, approvals and generated outputs
+extensions/approved-tools.json
+extensions/cache/
+extensions/logs/
+extensions/profiles/
+extensions/runtimes/
+**/state.json
+**/journal.jsonl
+**/events.jsonl
+# Temporary files, caches and local dependencies
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+cache/
+logs/
+tmp/
+temp/
+.venv/
+venv/
+node_modules/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+*.zip
+# Local secrets and machine settings
+.env
+.env.*
+auth.json
+credentials.json
+*.pem
+*.key
+Thumbs.db
+.DS_Store

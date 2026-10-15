@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "type": "step_plan",
+  "title": "当前步骤的分解计划",
+  "subtitle": "Astra 定义工作包与关键边界；Sol 负责细节。你批准当前版本后，才开始这一轮实施。",
+  "meta": {
+    "run_id": "TEMPLATE",
+    "gate": "step_plan",
+    "step": "STEP_ID",
+    "revision": 1,
+    "date": "按任务填写",
+    "status": "DRAFT",
+    "source_type": "TEMPLATE",
+    "is_template": true
+  },
+  "sections": [
+    {
+      "title": "当前步骤定义",
+      "blocks": [
+        {
+          "type": "kv",
+          "items": [
+            {
+              "label": "步骤ID与目标",
+              "value": "待对应已确认 roadmap。"
+            },
+            {
+              "label": "本步交付",
+              "value": "待填写可观察成果。"
+            },
+            {
+              "label": "前置条件",
+              "value": "待核对先前步骤/输入/方法和UI是否已确认。"
+            },
+            {
+              "label": "不改动范围",
+              "value": "待填写接口、文件和数据边界。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "分配给 Sol 的工作包",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "工作包ID",
+            "目标与范围",
+            "依赖",
+            "文件归属原则",
+            "执行模型"
+          ],
+          "rows": []
+        },
+        {
+          "type": "text",
+          "text": "按需要填写 work_packages；Astra 分到中等粒度，不提前代写每个函数或所有测试用例。"
+        }
+      ]
+    },
+    {
+      "title": "开工前必须满足",
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "status": "NOT_RUN",
+              "text": "相关UI与关键方法已由用户确认",
+              "detail": "待实际执行后填入证据"
+            },
+            {
+              "status": "NOT_RUN",
+              "text": "浏览器/网络/运行环境已尽早预检",
+              "detail": "待实际执行后填入证据"
+            },
+            {
+              "status": "NOT_RUN",
+              "text": "输入与输出目录明确、原始数据受保护",
+              "detail": "待实际执行后填入证据"
+            },
+            {
+              "status": "NOT_RUN",
+              "text": "关键任务已标注Sol执行或Luna执行",
+              "detail": "待实际执行后填入证据"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "最小必要验证与风险",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "风险/验收点",
+            "需要的证据",
+            "责任人",
+            "不需要重复做的检查"
+          ],
+          "rows": [
+            [
+              "待填写关键验收点",
+              "真实运行、合成已知答案或公开基准；说明范围",
+              "Sol细化/独立Sol校验",
+              "已有可信同版本检查可复用"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "授权与停止条件",
+      "blocks": [
+        {
+          "type": "callout",
+          "text": "只授权本版本、当前步骤。实现中若改变方法、UI、范围、依赖或关键接口，先回到 Astra 请求用户确认；一般范围内阻塞可定向修复，最多两轮。",
+          "title": "",
+          "level": "info"
+        }
+      ]
+    }
+  ],
+  "blocking_questions": [],
+  "work_packages": []
+}

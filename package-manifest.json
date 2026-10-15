@@ -1,0 +1,65 @@
+{
+  "name": "HexiPlan",
+  "version": "5.1.0",
+  "explicit_only": true,
+  "models": {
+    "astra": [
+      "gpt-6-astra",
+      "high"
+    ],
+    "sol": [
+      "gpt-5.6-sol",
+      "high"
+    ],
+    "luna": [
+      "gpt-6-luna",
+      "max"
+    ]
+  },
+  "limits": {
+    "sol": 3,
+    "luna": 6,
+    "browser": 2,
+    "high_memory": 1
+  },
+  "repair_rounds": 2,
+  "python_min": "3.10",
+  "codex_live_tested": false,
+  "reusable_html_templates": 12,
+  "local_regression_tests": 132,
+  "exports": [
+    "genuine offline DOCX",
+    "legacy DOC through existing Windows Microsoft Word"
+  ],
+  "live_codex_account_verified": false,
+  "local_rule_modules": 11,
+  "upstream_adaptations": 9,
+  "reference_only_modules": [
+    "stop-slop"
+  ],
+  "registered_skills": false,
+  "rules_require_runtime_network": false,
+  "report_assets_preserved_from": "3.0.0",
+  "local_module_tools": [
+    "route_modules.py",
+    "guard_report.py",
+    "render_layout.py",
+    "check_tool_plan.py",
+    "review_feedback.py"
+  ],
+  "structural_layouts": 4,
+  "ui_palette": "pale-green",
+  "ui_selection_status": "USER_CHOICE_PENDING",
+  "extension_policy_status": "USER_ACCEPTED",
+  "specific_mcp_tools_approved": 0,
+  "mcp_installed": false,
+  "targeted_review": true,
+  "feedback_schema": "hexiplan.review-feedback/1",
+  "feedback_exports": [
+    "JSON",
+    "Markdown",
+    "TXT",
+    "DOCX"
+  ],
+  "feedback_auto_approval": false
+}

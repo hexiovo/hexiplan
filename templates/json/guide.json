@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "type": "guide",
+  "title": "使用说明与操作文档",
+  "subtitle": "把安装条件、最短操作路径、输入输出与常见错误集中说明，供长期复用。",
+  "meta": {
+    "run_id": "TEMPLATE",
+    "gate": "",
+    "step": "",
+    "revision": 1,
+    "date": "按任务填写",
+    "status": "DRAFT",
+    "source_type": "TEMPLATE",
+    "is_template": true
+  },
+  "sections": [
+    {
+      "title": "适用范围与前提",
+      "blocks": [
+        {
+          "type": "kv",
+          "items": [
+            {
+              "label": "用途",
+              "value": "待描述本项目功能，不套用本框架自己的功能。"
+            },
+            {
+              "label": "运行环境",
+              "value": "待列实际必需环境，避免无用依赖。"
+            },
+            {
+              "label": "输入要求",
+              "value": "待明确数据格式、单位和文件组织。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "快速开始",
+      "blocks": [
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "title": "准备所需输入",
+              "description": "按实际项目填写，无需写出未实现操作。",
+              "status": "DRAFT"
+            },
+            {
+              "title": "执行最短操作路径",
+              "description": "提供真实菜单或命令。",
+              "status": "DRAFT"
+            },
+            {
+              "title": "查看和保存结果",
+              "description": "说明输出位置与关键字段。",
+              "status": "DRAFT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "界面与过程截图",
+      "blocks": [
+        {
+          "type": "gallery",
+          "title": "截图总体预览",
+          "images": []
+        }
+      ]
+    },
+    {
+      "title": "输入输出说明",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "字段/文件",
+            "含义",
+            "类型/单位",
+            "限制"
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "title": "常见问题与处理",
+      "blocks": [
+        {
+          "type": "table",
+          "columns": [
+            "现象",
+            "可能原因",
+            "如何核对",
+            "可恢复操作"
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "title": "版本、来源与限制",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "待填版本、第三方许可位置、已知限制和复现信息。"
+        }
+      ]
+    }
+  ],
+  "blocking_questions": []
+}

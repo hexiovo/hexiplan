@@ -1,4 +1,4 @@
-# HexiPlan 当前对话入口适配 v1.16
+# HexiPlan 当前对话入口适配 v1.17
 
 本文件只在用户明确启用 HexiPlan 后加载。HOME 固定为 H:/AIcode/HexiPlan；PROJECT 是当前对话实际工作目录；RUN 必须在 HOME/runs 内。此适配由用户授权部署，覆盖原包中“只许专用启动器”和“禁止此次最小用户级登记”的旧入口规定；启用HexiPlan后按EXECUTION_MODES.md选择常规、高消耗或超级消耗档；未备注时默认常规档，开始与收尾均由gpt-6-astra/high梳理需求和查漏。规划与执行采用下表指定的真实模型。旧协议中的模型及角色路由由本适配覆盖；资源、反馈、版本与哈希规则继续生效，检验节奏按用户选择的项目规模执行。不要运行 start-hexiplan.cmd、start-hexiplan.ps1 或 tools/launch.py，不启动第二个交互式 Codex，不逐项目安装，不迁移 CODEX_HOME。
 
@@ -110,6 +110,23 @@ HOME/entry/confirmation/frame/report.html是空白预览，example/report.html�
 兼容原状态机：小项目的roadmap_steps只设置一个覆盖全项目获批范围的总交付步骤，内部待办/工作包不建成多个验收步骤。G1需求、G2方案及必要的G3整体安排/G4全项目实施批准在开工前取得，之后整个总交付步骤完成时才进入一次G5检验与最终验收。不能伪造中间通过状态或通过编辑state.json绕过关口。这样复用原有状态、报告模板和哈希工具，无需重写状态机；较大项目继续使用多个实际步骤。
 
 本节是用户最新授权的检验节奏修正，覆盖旧协议中要求小项目也按每个内部步骤检验/验收的文字。主Sol必须将已选择的规模和检验节奏连同其它约束传给每个代理。
+
+## 编码要求：边界单次校验，避免多余防御和抽象
+
+以下是用户新增的编码要求，适用于三个消耗档位的规划、实现与独立检验；主Sol随派工传给所有相关代理。仅在当前任务需要写代码时应用，不因此开展无关旧代码重构。
+
+- Validate unknown values once at the boundary that owns them. Pass typed values inward instead of repeating `typeof value === "object"` and property-existence checks.
+- Do not defensively revalidate values already guaranteed by a schema, constructor, or internal type.
+- Do not extract single-use helpers preemptively. Inline the logic at the call site unless the helper is reused, hides a genuinely complex boundary, or has a clear independent name that improves the caller.
+- Avoid `try`/`catch` where possible.
+
+落实方式：由接收未知输入并负责它的边界完成一次必要校验，将具有明确类型和约束的值向内传递。schema、构造函数或内部类型已经保证的条件直接使用，不在每一层重复对象/属性检查；真正新进入的外部输入仍由所属边界处理，不把未经校验的值假装成可信类型。
+
+只用一次的简单逻辑默认就地写在调用处；存在实际复用、需要封装复杂边界，或独立命名确实让调用者更易理解时再提取辅助函数，不为将来可能复用预先增加层次。
+
+尽量不写try/catch，让错误沿已有机制传播；确实需要恢复、边界错误转换或资源清理时，在负责该行为的层处理一次。能用现有统一错误处理、finally或上下文管理机制完成的事情，沿用现有机制，不层层捕获并重新抛出、不吞掉错误，也不用无意义默认值掩盖失败。
+
+独立检验按这些原则指出本次范围内的多余防御、单次用途抽象和冗余捕获即可，继续复用已有证据、少量必要测试，不因新增风格规则扩大测试或重构范围。
 
 ## 按档位执行，避免无用消耗
 

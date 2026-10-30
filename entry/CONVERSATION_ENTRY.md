@@ -1,4 +1,4 @@
-# HexiPlan 当前对话入口适配 v1.17
+# HexiPlan 当前对话入口适配 v1.18
 
 本文件只在用户明确启用 HexiPlan 后加载。HOME 固定为 H:/AIcode/HexiPlan；PROJECT 是当前对话实际工作目录；RUN 必须在 HOME/runs 内。此适配由用户授权部署，覆盖原包中“只许专用启动器”和“禁止此次最小用户级登记”的旧入口规定；启用HexiPlan后按EXECUTION_MODES.md选择常规、高消耗或超级消耗档；未备注时默认常规档，开始与收尾均由gpt-6-astra/high梳理需求和查漏。规划与执行采用下表指定的真实模型。旧协议中的模型及角色路由由本适配覆盖；资源、反馈、版本与哈希规则继续生效，检验节奏按用户选择的项目规模执行。不要运行 start-hexiplan.cmd、start-hexiplan.ps1 或 tools/launch.py，不启动第二个交互式 Codex，不逐项目安装，不迁移 CODEX_HOME。
 
@@ -111,22 +111,20 @@ HOME/entry/confirmation/frame/report.html是空白预览，example/report.html�
 
 本节是用户最新授权的检验节奏修正，覆盖旧协议中要求小项目也按每个内部步骤检验/验收的文字。主Sol必须将已选择的规模和检验节奏连同其它约束传给每个代理。
 
-## 编码要求：边界单次校验，避免多余防御和抽象
+## 编码要求：只写必要逻辑，不加防御性代码，不重复校验
 
-以下是用户新增的编码要求，适用于三个消耗档位的规划、实现与独立检验；主Sol随派工传给所有相关代理。仅在当前任务需要写代码时应用，不因此开展无关旧代码重构。
+三个消耗档位的规划、实现和独立审阅统一遵守HOME/prompts/LEAN_IMPLEMENTATION.txt。该提示词参考公开编码提示与规范，结合用户要求改写；写代码时按需加载并随任务分发，不因此启动额外代理或扩大旧代码重构范围。
+
+正常路径直接实现，不为假想异常增加判空、类型/属性探测、多套兜底、静默降级和保护层。未知输入由负责它的边界必要处理一次，向内传递明确类型；schema、构造函数、内部类型与框架已有保证直接使用。错误交现有机制传播，确需恢复、转换或清理才由负责层处理一次；单次用途的简单逻辑优先内联。
+
+同一份未变化的数据、代码版本和环境，已有适用且有效的比对、检查或校验结果就复用，不换工具、命令或代理再做一遍。只有相关变化、原检查失败或关键证据缺失时补对应检查，结果足够即停止；独立审阅只补真实缺口，文字变更只核对内容，小项目最后统一检查。既有权限、路径安全、数据约束与批准/版本/内容哈希要求沿用负责边界的既有机制一次完成，不另外叠加校验链。
+
+此前用户四条英文要求作为历史来源保留，具体执行以本节及精简提示词的细化规则为准：
 
 - Validate unknown values once at the boundary that owns them. Pass typed values inward instead of repeating `typeof value === "object"` and property-existence checks.
 - Do not defensively revalidate values already guaranteed by a schema, constructor, or internal type.
 - Do not extract single-use helpers preemptively. Inline the logic at the call site unless the helper is reused, hides a genuinely complex boundary, or has a clear independent name that improves the caller.
 - Avoid `try`/`catch` where possible.
-
-落实方式：由接收未知输入并负责它的边界完成一次必要校验，将具有明确类型和约束的值向内传递。schema、构造函数或内部类型已经保证的条件直接使用，不在每一层重复对象/属性检查；真正新进入的外部输入仍由所属边界处理，不把未经校验的值假装成可信类型。
-
-只用一次的简单逻辑默认就地写在调用处；存在实际复用、需要封装复杂边界，或独立命名确实让调用者更易理解时再提取辅助函数，不为将来可能复用预先增加层次。
-
-尽量不写try/catch，让错误沿已有机制传播；确实需要恢复、边界错误转换或资源清理时，在负责该行为的层处理一次。能用现有统一错误处理、finally或上下文管理机制完成的事情，沿用现有机制，不层层捕获并重新抛出、不吞掉错误，也不用无意义默认值掩盖失败。
-
-独立检验按这些原则指出本次范围内的多余防御、单次用途抽象和冗余捕获即可，继续复用已有证据、少量必要测试，不因新增风格规则扩大测试或重构范围。
 
 ## 按档位执行，避免无用消耗
 

@@ -1,6 +1,6 @@
 # GitHub 静态发布说明
 
-本仓库包含 HexiPlan 5.1 原始工具、角色、模块、模板、离线页面、第三方许可资料，以及截至对话适配 v1.21 的新增入口与规则。当前对话入口和分工规则以 `entry/CONVERSATION_ENTRY.md`、`entry/EXECUTION_MODES.md`、`entry/NO_REVIEW_MODE.md` 为准；原 README、角色文件和启动器说明保留为原包资料。
+本仓库包含 HexiPlan 5.1 原始工具、角色、模块、模板、离线页面、第三方许可资料，以及截至对话适配 v1.22 的新增入口与规则。当前对话入口和分工规则以 `entry/CONVERSATION_ENTRY.md`、`entry/EXECUTION_MODES.md`、`entry/NO_REVIEW_MODE.md` 为准；原 README、角色文件和启动器说明保留为原包资料。
 
 默认常规档：6.2 Astra-high 开始/收尾，6.2 Sol-xhigh 规划，Luna-max 优先执行。明确指定高消耗档时全部规划交 6.2 Astra-high；超级消耗档全部规划交 6.2 Astra-xhigh、全部执行交 6.2 Sol-xhigh。显式启用 HexiPlan 后默认无需审核；修复最多30次，有进展在限内继续；循环、卡死或无进展提前停止，第30次仍失败则说明阻塞；鼠标接管仍须先申请。
 
@@ -57,3 +57,7 @@
 ## Astra 模型更新（v1.21）
 
 2026-11-18，三个档位的 Astra 统一使用 gpt-6.2-astra。常规和高消耗档使用 high，超级消耗档使用 xhigh。配置与校验清单已核对，实际调用仍待验证。
+
+## Luna 启动检查（v1.22）
+
+常规和高消耗档在缺少可信运行记录时，会实际尝试启动 gpt-6-luna / max，包括工具说明未列出该模型的情形。启动成功后核对运行元数据并复用代理。实际调用被拒绝或启动失败时，报告工具返回的原因。

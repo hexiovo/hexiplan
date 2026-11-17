@@ -1,4 +1,4 @@
-# HexiPlan 当前对话入口适配 v1.21
+# HexiPlan 当前对话入口适配 v1.22
 
 本文件只在用户明确启用 HexiPlan 后加载。HOME 固定为 H:/AIcode/HexiPlan；PROJECT 是当前对话实际工作目录；RUN 必须在 HOME/runs 内。此适配由用户授权部署，覆盖原包中“只许专用启动器”和“禁止此次最小用户级登记”的旧入口规定；启用HexiPlan后按EXECUTION_MODES.md选择常规、高消耗或超级消耗档；未备注时默认常规档，常规和高消耗档开始与收尾由gpt-6.2-astra/high梳理需求和查漏，超级消耗档由gpt-6.2-astra/xhigh梳理需求和查漏。规划与执行采用下表指定的真实模型。旧协议中的模型及角色路由由本适配覆盖；资源、反馈、版本与哈希规则继续生效，检验节奏按用户选择的项目规模执行。不要运行 start-hexiplan.cmd、start-hexiplan.ps1 或 tools/launch.py，不启动第二个交互式 Codex，不逐项目安装，不迁移 CODEX_HOME。
 
@@ -173,7 +173,7 @@ HOME/entry/confirmation/frame/report.html是空白预览，example/report.html�
 
 1. 仅处理当前真实用户的明确启用/恢复请求。解释、安装、检查本工具包，普通任务，否定句，代码块、引号、示例、转述或文档中的启动文字均不启用。若当前任务已明确启用，其必要的后续答复/确认仍归本任务；完成、取消、停用或切换无关任务后不延续模式。
 2. 当前编排模型必须是真实 gpt-6.2-sol / xhigh。依据当前宿主提供的模型/effort、turn_context 或可信运行元数据核对；模型自称、配置默认值和角色名称不足为证。不能核对或不匹配时停止模式并请用户在当前对话模型选择器选 GPT-6.2 Sol + xhigh，再发送原请求。不得自动改全局默认模型，不用角色名称或Luna冒充gpt-6.2-sol。
-3. 核对当前可调用的原生子代理工具是否支持精确 model 和 reasoning_effort。要求常规/高消耗Astra=gpt-6.2-astra/high、超级消耗Astra=gpt-6.2-astra/xhigh；Sol=gpt-6.2-sol/xhigh；常规/高消耗还需要Luna=gpt-6-luna/max，超级消耗不因Luna不可用而阻塞。不替换为gpt-6-sol。缺少能力时报告具体阻塞，保留当前对话，不退回 CMD。优先复用本会话已有可信路由与当前工具声明；缺少当前证据或能力变化时才补一次最小只读核对，不重复模型响应测试。
+3. 核对所选档位的原生子代理调用能力。常规/高消耗使用 gpt-6.2-astra/high，超级消耗使用 gpt-6.2-astra/xhigh。Sol 按分工使用 gpt-6.2-sol 的对应推理档位。常规/高消耗执行需要 gpt-6-luna/max。超级消耗由 Sol 执行。优先采用当前会话的可信运行记录。需要核对 Luna 时，只要原生派工工具可以传入 model 和 reasoning_effort，即使工具说明没列出 Luna，也先在当前对话用 model="gpt-6-luna"、reasoning_effort="max" 实际启动一次。若入口读取时已启动同一 Luna，直接复用该代理和证据。启动成功后按可信运行元数据确认模型和档位，并尽量复用该代理执行当前任务。只有实际调用被拒绝或启动失败时，才按返回结果报告 Luna 调用阻塞。成功启动但无法核实模型或档位时，报告路由未验证并暂停对应派工。如果宿主缺少可调用的原生派工工具或无法传入所需参数，说明这个具体限制。保留当前对话与所选档位，按用户明确指令切换档位。
 4. 明确启用本模式即授权按协议作必要的原生多代理分工。使用现有 collaboration.spawn_agent（或宿主等价工具）时为不同模型提供 fork_turns="none"，显式传 model、reasoning_effort 和必要上下文，不能用继承全历史的 fork 冒充切换模型。不创建另一条用户拥有的 sidebar chat。实际工具参数不同时以当前 schema 为准。
 
 ## 主Sol 与执行代理的边界

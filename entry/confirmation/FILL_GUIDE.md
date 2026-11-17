@@ -1,6 +1,6 @@
 # 固定确认HTML框架：只填内容
 
-角色按entry/EXECUTION_MODES.md解释：规划负责人在常规档为6.2 Sol-xhigh，高消耗为Astra-high，超级消耗为Astra-xhigh；执行代理在常规/高消耗为Luna-max，超级消耗为6.2 Sol-xhigh；独立技术检验按当前档位使用未主导实施的Sol。消耗档位和审核方式分别保存，“无需审核”不自动升档。
+角色按entry/EXECUTION_MODES.md解释：规划负责人在常规档为6.2 Sol-xhigh，高消耗为6.2 Astra-high，超级消耗为6.2 Astra-xhigh；执行代理在常规/高消耗为Luna-max，超级消耗为6.2 Sol-xhigh；独立技术检验按当前档位使用未主导实施的Sol。消耗档位和审核方式分别保存，“无需审核”不自动升档。
 
 入口：entry/confirmation/fill_confirmation.py。页面结构和区块类型固定，复用原有离线HTML/CSS/JS、逐项反馈、Word导出和版本哈希。
 

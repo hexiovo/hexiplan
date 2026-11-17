@@ -1,8 +1,8 @@
 # GitHub 静态发布说明
 
-本仓库包含 HexiPlan 5.1 原始工具、角色、模块、模板、离线页面、第三方许可资料，以及截至对话适配 v1.20 的新增入口与规则。当前对话入口和分工规则以 `entry/CONVERSATION_ENTRY.md`、`entry/EXECUTION_MODES.md`、`entry/NO_REVIEW_MODE.md` 为准；原 README、角色文件和启动器说明保留为原包资料。
+本仓库包含 HexiPlan 5.1 原始工具、角色、模块、模板、离线页面、第三方许可资料，以及截至对话适配 v1.21 的新增入口与规则。当前对话入口和分工规则以 `entry/CONVERSATION_ENTRY.md`、`entry/EXECUTION_MODES.md`、`entry/NO_REVIEW_MODE.md` 为准；原 README、角色文件和启动器说明保留为原包资料。
 
-默认常规档：Astra-high 开始/收尾，6.2 Sol-xhigh 规划，Luna-max 优先执行。明确指定高消耗档时全部规划交 Astra-high；超级消耗档全部规划交 Astra-xhigh、全部执行交 6.2 Sol-xhigh。显式启用 HexiPlan 后默认无需审核；修复最多30次，有进展在限内继续；循环、卡死或无进展提前停止，第30次仍失败则说明阻塞；鼠标接管仍须先申请。
+默认常规档：6.2 Astra-high 开始/收尾，6.2 Sol-xhigh 规划，Luna-max 优先执行。明确指定高消耗档时全部规划交 6.2 Astra-high；超级消耗档全部规划交 6.2 Astra-xhigh、全部执行交 6.2 Sol-xhigh。显式启用 HexiPlan 后默认无需审核；修复最多30次，有进展在限内继续；循环、卡死或无进展提前停止，第30次仍失败则说明阻塞；鼠标接管仍须先申请。
 
 当前状态命令使用 `entry/workflow_adapter.py`，原 `tools/workflow.py` 保留。HTML 使用既有框架，后续只填内容。仓库内 `entry/confirmation/frame` 和 `example` 都是模板预览，不是真实任务报告。
 
@@ -53,3 +53,7 @@
 ## 模型版本更新（v1.20）
 
 2026-11-18，按用户要求统一使用 gpt-6.2-sol。主Sol入口、常规规划和超级消耗执行使用 xhigh，高消耗档按需使用的Sol检验使用 high。入口、角色说明、恢复及确认模板已同步，入口模型检查的推理档位已对齐 xhigh。本次核对配置内容及校验清单，实际模型调用仍待验证。
+
+## Astra 模型更新（v1.21）
+
+2026-11-18，三个档位的 Astra 统一使用 gpt-6.2-astra。常规和高消耗档使用 high，超级消耗档使用 xhigh。配置与校验清单已核对，实际调用仍待验证。

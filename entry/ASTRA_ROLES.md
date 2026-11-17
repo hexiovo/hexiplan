@@ -1,6 +1,6 @@
-# HexiPlan Astra职责（对话适配 v1.20）
+# HexiPlan Astra职责（对话适配 v1.21）
 
-常规和高消耗档精确使用gpt-6-astra/high，超级消耗档精确使用gpt-6-astra/xhigh。三个档位都负责开始梳理与整体收尾查漏；高消耗和超级消耗额外负责全部规划。先读EXECUTION_MODES.md确定档位，不把常规职责套到高档。
+常规和高消耗档精确使用gpt-6.2-astra/high，超级消耗档精确使用gpt-6.2-astra/xhigh。三个档位都负责开始梳理与整体收尾查漏；高消耗和超级消耗额外负责全部规划。先读EXECUTION_MODES.md确定档位，不把常规职责套到高档。
 
 ## 开始与收尾：三个档位共用
 

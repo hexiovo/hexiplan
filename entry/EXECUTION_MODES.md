@@ -1,14 +1,14 @@
-# HexiPlan三档消耗模式（对话适配 v1.19）
+# HexiPlan三档消耗模式（对话适配 v1.20）
 
 该文件决定真实模型分工，覆盖旧协议固定“Sol规划/Luna执行”的描述。只有显式启用HexiPlan的当前任务适用，不能把常规默认解释为所有普通聊天自动启用HexiPlan。
 
 | execution_mode | 用户名称 | 规划负责人 | 执行代理 |
 | --- | --- | --- | --- |
-| standard | 常规模式（默认） | gpt-6.1-sol/xhigh | gpt-6-luna/max优先 |
+| standard | 常规模式（默认） | gpt-6.2-sol/xhigh | gpt-6-luna/max优先 |
 | high_consumption | 高消耗模式 | gpt-6-astra/high负责全部规划 | gpt-6-luna/max优先 |
-| super_consumption | 超级消耗模式 | gpt-6-astra/xhigh负责全部规划 | gpt-6.1-sol/xhigh承担全部执行 |
+| super_consumption | 超级消耗模式 | gpt-6-astra/xhigh负责全部规划 | gpt-6.2-sol/xhigh承担全部执行 |
 
-开始梳理与整体收尾查漏：常规和高消耗档为gpt-6-astra/high，超级消耗档为gpt-6-astra/xhigh。独立技术检验：常规和超级消耗档为未主导实施的gpt-6.1-sol/xhigh代理，高消耗档为未主导实施的gpt-6.1-sol/high代理。超级消耗的实施Sol不能自称独立检验者，必须分离代理身份并复用有效证据。
+开始梳理与整体收尾查漏：常规和高消耗档为gpt-6-astra/high，超级消耗档为gpt-6-astra/xhigh。独立技术检验：常规和超级消耗档为未主导实施的gpt-6.2-sol/xhigh代理，高消耗档为未主导实施的gpt-6.2-sol/high代理。超级消耗的实施Sol不能自称独立检验者，必须分离代理身份并复用有效证据。
 
 ## 选择与切换
 
@@ -28,7 +28,7 @@
 
 ## 入口、存储与恢复
 
-缺少直接文件读取工具时：明确超级档用Sol-xhigh读取；常规/高消耗用Luna-max读取。恢复未知档位的任务先用Sol-xhigh只读最小状态识别，再按保存档位执行，避免误派Luna执行超级档。父对话仍为gpt-6.1-sol/xhigh协调入口；模型选择以原生参数与可信运行元数据为准。
+缺少直接文件读取工具时：明确超级档用Sol-xhigh读取；常规/高消耗用Luna-max读取。恢复未知档位的任务先用Sol-xhigh只读最小状态识别，再按保存档位执行，避免误派Luna执行超级档。父对话仍为gpt-6.2-sol/xhigh协调入口；模型选择以原生参数与可信运行元数据为准。
 
 任务初始化后由当前执行代理使用workflow_adapter.py note记录execution_mode、planner_model/effort、executor_model/effort、真实选择来源或“未注明采用常规”、生效时点。切换记录前后档位与真实消息；同一RUN的补充和恢复沿用最近记录，旧任务无记录时采用standard。不要修改state.json、旧批准或历史模型字段来伪造切换。任务结束不将其高档偏好带到其它新任务。
 
@@ -46,6 +46,6 @@ Astra同时≤1；所有Sol（主Sol、执行、难点与独立检验）合计�
 
 并行要求（v1.16）：规划负责人识别真正独立的工作并及时派发，标明输入、范围/负责文件、依赖和交付物。三档模型分工不变；不并行重复同一检索/测试，不同时修改同一文件，不提前运行依赖未就绪的检查。总容量7个子代理不含主代理，模型/浏览器/高内存池上限同时生效；卡顿、争用或限流时主动降低并发。
 
-模型档位修正（v1.19）：常规档规划和主Sol入口使用gpt-6.1-sol/xhigh；高消耗档维持gpt-6-astra/high规划与gpt-6-luna/max执行；超级消耗档使用gpt-6-astra/xhigh规划、gpt-6.1-sol/xhigh执行和独立检验。
+模型版本更新（v1.20）：常规档规划和主Sol入口使用gpt-6.2-sol/xhigh；高消耗档维持gpt-6-astra/high规划与gpt-6-luna/max执行；超级消耗档使用gpt-6-astra/xhigh规划、gpt-6.2-sol/xhigh执行和独立检验。
 
 编码要求（v1.18）：按HOME/prompts/LEAN_IMPLEMENTATION.txt只写当前必要逻辑，不加防御性代码；未知输入在所属边界处理一次，内部信任已有保证，错误由负责层处理，简单单次逻辑内联。已有有效检查/比对/校验结果直接复用，不换工具或代理重复证明；只有相关变化、原检查失败或关键证据缺失时补对应检查，足够即停止。三档适用，不扩大改动或测试范围。

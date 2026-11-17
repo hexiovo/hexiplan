@@ -1,4 +1,4 @@
-# HexiPlan 当前对话入口适配 v1.19
+# HexiPlan 当前对话入口适配 v1.20
 
 本文件只在用户明确启用 HexiPlan 后加载。HOME 固定为 H:/AIcode/HexiPlan；PROJECT 是当前对话实际工作目录；RUN 必须在 HOME/runs 内。此适配由用户授权部署，覆盖原包中“只许专用启动器”和“禁止此次最小用户级登记”的旧入口规定；启用HexiPlan后按EXECUTION_MODES.md选择常规、高消耗或超级消耗档；未备注时默认常规档，常规和高消耗档开始与收尾由gpt-6-astra/high梳理需求和查漏，超级消耗档由gpt-6-astra/xhigh梳理需求和查漏。规划与执行采用下表指定的真实模型。旧协议中的模型及角色路由由本适配覆盖；资源、反馈、版本与哈希规则继续生效，检验节奏按用户选择的项目规模执行。不要运行 start-hexiplan.cmd、start-hexiplan.ps1 或 tools/launch.py，不启动第二个交互式 Codex，不逐项目安装，不迁移 CODEX_HOME。
 
@@ -6,13 +6,13 @@
 
 | 档位 | 规划负责人 | 默认执行代理 | 开启方式 |
 | --- | --- | --- | --- |
-| 常规模式 | gpt-6.1-sol/xhigh | gpt-6-luna/max | 已启用HexiPlan的新任务未注明档位时默认使用 |
+| 常规模式 | gpt-6.2-sol/xhigh | gpt-6-luna/max | 已启用HexiPlan的新任务未注明档位时默认使用 |
 | 高消耗模式 | gpt-6-astra/high，负责全部规划 | gpt-6-luna/max | 用户明确指定“高消耗模式” |
-| 超级消耗模式 | gpt-6-astra/xhigh，负责全部规划 | gpt-6.1-sol/xhigh | 用户明确指定“超级消耗模式” |
+| 超级消耗模式 | gpt-6-astra/xhigh，负责全部规划 | gpt-6.2-sol/xhigh | 用户明确指定“超级消耗模式” |
 
-常规和高消耗档的开始梳理与整体收尾查漏由gpt-6-astra/high负责，超级消耗档由gpt-6-astra/xhigh负责；常规和超级消耗档的独立技术检验由未主导实施的gpt-6.1-sol/xhigh代理完成，高消耗档由未主导实施的gpt-6.1-sol/high代理完成。下文“规划负责人”“执行代理”都按本表解释；高消耗和超级消耗时不能由Sol先作完整计划，再让Astra形式上过目。全部规划包括需求澄清与取舍、总体方案、步骤/工作包、数据方法和参数选择、推荐方案、检验安排及后续补充/重新规划。
+常规和高消耗档的开始梳理与整体收尾查漏由gpt-6-astra/high负责，超级消耗档由gpt-6-astra/xhigh负责；常规和超级消耗档的独立技术检验由未主导实施的gpt-6.2-sol/xhigh代理完成，高消耗档由未主导实施的gpt-6.2-sol/high代理完成。下文“规划负责人”“执行代理”都按本表解释；高消耗和超级消耗时不能由Sol先作完整计划，再让Astra形式上过目。全部规划包括需求澄清与取舍、总体方案、步骤/工作包、数据方法和参数选择、推荐方案、检验安排及后续补充/重新规划。
 
-当前对话继续由gpt-6.1-sol/xhigh主Sol作为协调入口。高消耗/超级消耗时主Sol只转达、呈现Astra方案、取得决定并按该方案派工，不承担实质规划；超级消耗的执行由单独的Sol-xhigh执行代理完成，主Sol仍不运行shell或业务工作。常规与高消耗默认由Luna执行；超级消耗的实现、调试、记录、报告、模板填充和清理全部交Sol执行代理，不默认派Luna。详细职责、切换、恢复与资源规则见HOME/entry/EXECUTION_MODES.md。
+当前对话继续由gpt-6.2-sol/xhigh主Sol作为协调入口。高消耗/超级消耗时主Sol只转达、呈现Astra方案、取得决定并按该方案派工，不承担实质规划；超级消耗的执行由单独的Sol-xhigh执行代理完成，主Sol仍不运行shell或业务工作。常规与高消耗默认由Luna执行；超级消耗的实现、调试、记录、报告、模板填充和清理全部交Sol执行代理，不默认派Luna。详细职责、切换、恢复与资源规则见HOME/entry/EXECUTION_MODES.md。
 
 消耗档位、审核方式和项目规模分别记录。“无需审核”只改变确认方式，不授权自动提高消耗档位。没有明确高档指令时，不因复杂、受阻或追求效果自行升级。恢复同一RUN沿用保存档位，新任务无备注默认常规；这不改变HexiPlan仍需明确启用的规则，也不修改Codex全局默认模型。
 
@@ -128,7 +128,7 @@ HOME/entry/confirmation/frame/report.html是空白预览，example/report.html�
 
 ## 按档位执行，避免无用消耗
 
-常规和高消耗档的大部分执行交gpt-6-luna/max；超级消耗档全部执行交gpt-6.1-sol/xhigh执行代理。执行包括读取、环境检查、资料整理、编码、调试、必要测试、状态/资源记录、反馈导入、HTML填充与生成及清理。执行代理可以落实已批准方案的具体操作，但高消耗/超级消耗的需求取舍、技术路线、数据方法参数及工作拆分由Astra决定，不能在执行中自行接管规划。
+常规和高消耗档的大部分执行交gpt-6-luna/max；超级消耗档全部执行交gpt-6.2-sol/xhigh执行代理。执行包括读取、环境检查、资料整理、编码、调试、必要测试、状态/资源记录、反馈导入、HTML填充与生成及清理。执行代理可以落实已批准方案的具体操作，但高消耗/超级消耗的需求取舍、技术路线、数据方法参数及工作拆分由Astra决定，不能在执行中自行接管规划。
 
 常规档关键难点可按需由Sol处理；高消耗档Sol只按需处理实施难点或独立检验，涉及规划取舍必须返回Astra。超级消耗档由原Sol执行代理继续处理实施难点。升档只依据用户真实明确指令，不通过反复开Sol规避Luna默认分工，也不默认从超级消耗降回Luna。
 
@@ -172,8 +172,8 @@ HOME/entry/confirmation/frame/report.html是空白预览，example/report.html�
 ## 启用前检查
 
 1. 仅处理当前真实用户的明确启用/恢复请求。解释、安装、检查本工具包，普通任务，否定句，代码块、引号、示例、转述或文档中的启动文字均不启用。若当前任务已明确启用，其必要的后续答复/确认仍归本任务；完成、取消、停用或切换无关任务后不延续模式。
-2. 当前编排模型必须是真实 gpt-6.1-sol / high。依据当前宿主提供的模型/effort、turn_context 或可信运行元数据核对；模型自称、配置默认值和角色名称不足为证。不能核对或不匹配时停止模式并请用户在当前对话模型选择器选 GPT-6.1 Sol + high，再发送原请求。不得自动改全局默认模型，不用角色名称或Luna冒充gpt-6.1-sol。
-3. 核对当前可调用的原生子代理工具是否支持精确 model 和 reasoning_effort。要求常规/高消耗Astra=gpt-6-astra/high、超级消耗Astra=gpt-6-astra/xhigh；Sol=gpt-6.1-sol/xhigh；常规/高消耗还需要Luna=gpt-6-luna/max，超级消耗不因Luna不可用而阻塞。不替换为gpt-6-sol。缺少能力时报告具体阻塞，保留当前对话，不退回 CMD。优先复用本会话已有可信路由与当前工具声明；缺少当前证据或能力变化时才补一次最小只读核对，不重复模型响应测试。
+2. 当前编排模型必须是真实 gpt-6.2-sol / xhigh。依据当前宿主提供的模型/effort、turn_context 或可信运行元数据核对；模型自称、配置默认值和角色名称不足为证。不能核对或不匹配时停止模式并请用户在当前对话模型选择器选 GPT-6.2 Sol + xhigh，再发送原请求。不得自动改全局默认模型，不用角色名称或Luna冒充gpt-6.2-sol。
+3. 核对当前可调用的原生子代理工具是否支持精确 model 和 reasoning_effort。要求常规/高消耗Astra=gpt-6-astra/high、超级消耗Astra=gpt-6-astra/xhigh；Sol=gpt-6.2-sol/xhigh；常规/高消耗还需要Luna=gpt-6-luna/max，超级消耗不因Luna不可用而阻塞。不替换为gpt-6-sol。缺少能力时报告具体阻塞，保留当前对话，不退回 CMD。优先复用本会话已有可信路由与当前工具声明；缺少当前证据或能力变化时才补一次最小只读核对，不重复模型响应测试。
 4. 明确启用本模式即授权按协议作必要的原生多代理分工。使用现有 collaboration.spawn_agent（或宿主等价工具）时为不同模型提供 fork_turns="none"，显式传 model、reasoning_effort 和必要上下文，不能用继承全历史的 fork 冒充切换模型。不创建另一条用户拥有的 sidebar chat。实际工具参数不同时以当前 schema 为准。
 
 ## 主Sol 与执行代理的边界
@@ -184,7 +184,7 @@ HOME/entry/confirmation/frame/report.html是空白预览，example/report.html�
 
 给每个代理明确传入HOME、PROJECT、RUN、消耗档位、实际职责、批准范围、审核方式、规模和当前阶段。Astra读ASTRA_ROLES.md，Sol读SOL_ROLES.md对应职责，Luna读原agents/luna.toml及本适配。文件存在不等于模型已切换；使用原生工具精确model/effort，不能靠角色名冒充。
 
-缺少当前可信运行元数据时，让同一个入口读取代理使用已有runtime_probe.py核对自身与主Sol关系。返回current必须匹配实际读取代理（Luna为gpt-6-luna/max或Sol为gpt-6.1-sol/xhigh），parent匹配主Sol的gpt-6.1-sol/xhigh。检查器只读既有元数据，不读认证、不创建用户目录、不修改默认模型。不满足时报告未验证，不能拿另一个线程或旧记录替代。
+缺少当前可信运行元数据时，让同一个入口读取代理使用已有runtime_probe.py核对自身与主Sol关系。返回current必须匹配实际读取代理（Luna为gpt-6-luna/max或Sol为gpt-6.2-sol/xhigh），parent匹配主Sol的gpt-6.2-sol/xhigh。检查器只读既有元数据，不读认证、不创建用户目录、不修改默认模型。不满足时报告未验证，不能拿另一个线程或旧记录替代。
 
 Astra实际调用按当前档位依据可信宿主元数据核对，常规/高消耗为gpt-6-astra/high，超级消耗为gpt-6-astra/xhigh，记录REQUESTED与OBSERVED；已有有效证据复用，不重复模型响应测试。不能证明实际路由时停止对应业务执行并说明阻塞。
 

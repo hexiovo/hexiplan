@@ -1,6 +1,6 @@
-# HexiPlan Sol职责（对话适配 v1.19）
+# HexiPlan Sol职责（对话适配 v1.20）
 
-主Sol入口、常规规划和超级消耗执行使用真实gpt-6.1-sol/xhigh；高消耗档按需使用的Sol检验保持gpt-6.1-sol/high。先按entry/EXECUTION_MODES.md确定档位，再采用下列职责；开始与收尾由Astra按当前档位负责。角色名不能代替实际model/effort，缺少能力不得静默替换。
+主Sol入口、常规规划和超级消耗执行使用真实gpt-6.2-sol/xhigh；高消耗档按需使用的Sol检验保持gpt-6.2-sol/high。先按entry/EXECUTION_MODES.md确定档位，再采用下列职责；开始与收尾由Astra按当前档位负责。角色名不能代替实际model/effort，缺少能力不得静默替换。
 
 ## 主Sol：对话协调入口
 
